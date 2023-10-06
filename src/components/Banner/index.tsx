@@ -25,7 +25,7 @@ export function Banner() {
                             <h2>Olá, eu sou o João</h2>
                             <h2 className={styles.red}>Desenvolvedor Front End</h2>
                         </div>
-                        <Button>Entre em contato</Button>
+                        <Button><a href="#contact">Entre em contato</a></Button>
                     </div>
                 </div>
                 <div className={`col-md-4 ${styles.imgContainer}`}>
