@@ -1,10 +1,15 @@
+import { About } from "./components/About"
+import { Banner } from "./components/Banner"
+import { Header } from "./components/Header"
 
 function App() {
 
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Header />
+      <Banner />
+      <About />
+    </>
   )
 }
 
