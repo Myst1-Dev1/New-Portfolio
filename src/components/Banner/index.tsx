@@ -29,7 +29,7 @@ export function Banner() {
                     </div>
                 </div>
                 <div className={`col-md-4 ${styles.imgContainer}`}>
-                    <img src={userPortfolioImage} alt="" />
+                    <img src={userPortfolioImage} alt="joão-victor-image" />
                 </div>
             </div>
         </div>

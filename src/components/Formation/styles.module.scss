@@ -1,0 +1,23 @@
+.formation {
+
+    .formationContainer {
+       .wrap {
+        flex-wrap: wrap;
+       }
+        
+        .icon {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .formation{
+        margin-top: 50px;
+        .formationContainer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
