@@ -3,7 +3,6 @@ import { SubTitle } from '../SubTitle';
 import styles from './styles.module.scss';
 
 import aboutImage from '../../assets/images/aboutImage.jpg';
-import { Skills } from '../Skills';
 import { Formation } from '../Formation';
 
 export function About() {
@@ -30,10 +29,9 @@ export function About() {
                 <div className={`col-md-4 mb-5 ${styles.imgContainer}`}>
                     <img className='img-fluid' src={aboutImage} alt="about-image" />
                 </div>
-                <div className='col-md-4 mt-4'>
-                    <Skills />
+                <div className='col-md-4'>
+                    <Formation />
                 </div>
-                <Formation />
             </div> 
         </div>
     )

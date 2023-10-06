@@ -8,52 +8,55 @@ import sass from '../../assets/images/sass.png'
 import react from '../../assets/images/react.png'
 import figma from '../../assets/images/figma.png'
 import jest from '../../assets/images/jest.png'
-import ux_ui from '../../assets/images/UX.png'
+import { SubTitle } from '../SubTitle';
 
 const skills = [
     {
         id:1,
-        img: `${html}`
+        img: `${html}`,
+        name:'Html'
     },
 
     {
         id:2,
-        img: `${css}`
+        img: `${css}`,
+        name: 'Css'
     },
 
     {
         id:3,
-        img: `${javascript}`
+        img: `${javascript}`,
+        name: 'Javascript'
     },
 
     {
         id:4,
-        img: `${bootstrap}`
+        img: `${bootstrap}`,
+        name: 'Bootstrap'
     },
 
     {
         id:5,
-        img: `${sass}`
+        img: `${sass}`,
+        name: 'Sass'
     },
 
     {
         id:6,
-        img: `${react}`
+        img: `${react}`,
+        name: 'React'
     },
 
     {
         id:7,
-        img: `${figma}`
+        img: `${figma}`,
+        name: 'Figma'
     },
 
     {
         id:8,
-        img: `${jest}`
-    },
-
-    {
-        id:9,
-        img: `${ux_ui}`
+        img: `${jest}`,
+        name: 'Jest'
     },
 
 ]
@@ -61,11 +64,18 @@ const skills = [
 export function Skills() {
     return (
         <div className={styles.skills}>
-            {skills.map((skill:any) => (
-                <div key={skill.id} className={styles.imgContainer}>
-                    <img src={skill.img} alt="skill-image" />
-                </div>
-            ))}
+            <SubTitle title="Habilidades" subtitle="Ferramentas que utilizo em meus projetos" />
+            <div className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
+                {skills.map((skill:any) => (
+                    <div key={skill.id} className={`d-flex align-items-center flex-column gap-3 
+                        ${styles.skillBox}`}>
+                        <div className={styles.imgContainer}>
+                            <img src={skill.img} alt="skill-image" />
+                        </div>
+                        <h6 className='text-center'>{skill.name}</h6>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
