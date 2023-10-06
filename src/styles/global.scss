@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 @media (max-width: 1080px) {
     html {
       font-size: 93.75%;

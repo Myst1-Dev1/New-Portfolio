@@ -1,0 +1,29 @@
+.projects {
+    margin-bottom: 100px;
+
+    .projectBox {
+
+        .imgContainer {
+            width: 400px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            color: var(--gray-500);
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .projects {
+        .projectBox {
+            .imgContainer {
+                width: 250px;
+            }
+        }
+    }
+}

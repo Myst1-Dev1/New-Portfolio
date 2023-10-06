@@ -12,7 +12,7 @@ export function Services() {
                 <div className={`col-md-4 d-flex gap-2 flex-column align-items-center ${styles.serviceBox}`}>
                     <FaCode className={styles.icon} />
                     <h4 className='fw-bold'>Desenvolvimento Web</h4>
-                    <p>Criação de manuntenção de <br /> sites e aplicações para web</p>
+                    <p>Criação e manuntenção de <br /> sites e aplicações para web</p>
                 </div>
                 <div className={`col-md-4 d-flex gap-2 flex-column align-items-center ${styles.serviceBox}`}>
                     <FaPencilAlt className={styles.icon} />
