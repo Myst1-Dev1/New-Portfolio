@@ -63,7 +63,7 @@ const skills = [
 
 export function Skills() {
     return (
-        <div className={styles.skills}>
+        <div id='skills' className={styles.skills}>
             <SubTitle title="Habilidades" subtitle="Ferramentas que utilizo em meus projetos" />
             <div className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
                 {skills.map((skill:any) => (

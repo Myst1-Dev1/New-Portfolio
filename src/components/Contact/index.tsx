@@ -6,7 +6,7 @@ import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaPaperPlane } from 'react-icons/f
 
 export function Contact() {
     return (
-        <>
+        <div id='contact'>
             <SubTitle title="Contato" subtitle="Entre em contato" />
 
             <div className={styles.contact} id='contact'>
@@ -55,6 +55,6 @@ export function Contact() {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

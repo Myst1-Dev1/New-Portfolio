@@ -1,9 +1,38 @@
 .header {
     padding: 20px;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    transition: 0.3s;
+
+    .Icon {
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--red-500);
+        }
+    }
+}
+
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #141414;
+    width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    animation:fadeIn 1s linear;
+
+    @keyframes fadeIn {
+        0%{
+            opacity: 0;
+        }
+    }
 
     .Icon {
         font-size: 20px;

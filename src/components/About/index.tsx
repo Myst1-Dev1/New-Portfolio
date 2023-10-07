@@ -7,7 +7,7 @@ import { Formation } from '../Formation';
 
 export function About() {
     return (
-        <div className={`container mb-5 ${styles.about}`}>
+        <div id='about' className={`container mb-5 ${styles.about}`}>
             <SubTitle title="Sobre" subtitle="Quem eu sou"/>
 
             <div className='mt-5 row justify-content-center'>

@@ -5,7 +5,7 @@ import { FaCode, FaPencilAlt, FaAndroid } from 'react-icons/fa';
 
 export function Services() {
     return (
-        <div className={`container ${styles.services}`}>
+        <div id='services' className={`container ${styles.services}`}>
             <SubTitle title="Serviços" subtitle="O que eu ofereço" />
 
             <div className={`mt-5 row m-auto gap-5 justify-content-center ${styles.serviceContainer}`}>

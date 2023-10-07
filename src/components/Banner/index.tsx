@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export function Banner() {
     return (
-        <div className={styles.banner}>
+        <div id='home' className={styles.banner}>
             <div className='row m-auto justify-content-center container text-light'>
                 <div className='col-md-8 d-flex align-items-center gap-5 mb-5 mt-5'>
                     <div className={`d-flex flex-column gap-3 ${styles.bannerIcons}`}>

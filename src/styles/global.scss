@@ -12,6 +12,10 @@
     --gray-700:#334155;
 }
 
+body {
+    transition: 0.3s;
+}
+
 button {
     cursor: pointer;
 }
@@ -22,6 +26,11 @@ a {
 
 .wrap {
     flex-wrap: wrap;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
 }
 
 @media (max-width: 1080px) {

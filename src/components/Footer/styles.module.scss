@@ -1,0 +1,46 @@
+.footer {
+    background-color: #141414;
+    width: 100%;
+    height: 300px;
+
+    h5 {
+        color: var(--gray-500);
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--red-500);
+        }
+    }
+
+    .icon {
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.3s;
+
+        &:hover {
+            color: var(--red-500);
+        }
+    }
+}
+
+.copyright {
+    border-top: 1px solid var(--gray-700);
+    background-color: #141414;
+    width: 100%;
+    height: 50px;
+
+    p {
+        color: var(--gray-700);
+    }
+}
+
+@media(max-width:430px) {
+    .copyright {
+        border-bottom: 1px solid var(--gray-700);
+    }
+}

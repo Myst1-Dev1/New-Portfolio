@@ -7,7 +7,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 export function Projects() {
     return (
-        <>
+        <div id='projects'>
             <SubTitle title="Portfolio"  subtitle="Projeto desenvolvidos"/>
 
             <div className={`${styles.projects}`}>
@@ -31,6 +31,6 @@ export function Projects() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
