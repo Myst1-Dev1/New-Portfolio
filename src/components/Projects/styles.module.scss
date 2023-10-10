@@ -8,11 +8,13 @@
             img {
                 width: 100%;
                 object-fit: cover;
+                border-radius: 10px;
             }
         }
 
         p {
             color: var(--gray-500);
+            max-width: 300px;
         }
     }
 }
@@ -21,7 +23,8 @@
     .projects {
         .projectBox {
             .imgContainer {
-                width: 250px;
+                width: 300px;
+                
             }
         }
     }

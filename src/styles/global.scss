@@ -10,6 +10,15 @@
 
     --gray-500:#6B7280;
     --gray-700:#334155;
+
+    --swiper-pagination-color: #EF4444;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--red-500);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
 }
 
 body {
@@ -31,6 +40,14 @@ a {
 .dark-mode {
     background-color: #000;
     color: #fff;
+
+    input, textarea {
+        color: #fff;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #9ca3af;
 }
 
 @media (max-width: 1080px) {
@@ -43,4 +60,13 @@ a {
     html {
         font-size: 87.5%;
       }
+}
+
+@media(max-width: 430px) {
+    .swiper-button-next, .swiper-button-prev {
+        color: #9ca3af;
+        margin-top: 20px;
+        width: 30px;
+        display: none;
+    }
 }
