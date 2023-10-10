@@ -35,3 +35,17 @@
         }
     }
 }
+
+@media(max-width: 320px) {
+    .banner {
+        .imgContainer {
+            width: 200px;
+            height: 200px;
+        }
+
+        button {
+            width: 180px;
+            font-size: 12px;
+        }
+    }
+}

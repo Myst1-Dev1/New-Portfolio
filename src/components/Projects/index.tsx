@@ -3,11 +3,12 @@ import styles from './styles.module.scss';
 
 import mysFlix from '../../assets/images/mysflix.png';
 import msDashBoard from '../../assets/images/msdash.png';
+import pokedex from '../../assets/images/pkdex.png';
 
 import { Button } from '../Button';
 import { FaArrowRight } from 'react-icons/fa';
 
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -25,8 +26,15 @@ const projects = [
         id: 2,
         img: `${msDashBoard}`,
         title: 'MS Dashboard',
-        description: 'Projeto de dashboard desenvolvido com Next.js e Firebase. O dashboard possibilita a criação de contas de usuário, o login com as contas criadas e a criação de novos usuários.',
+        description: 'Projeto de dashboard desenvolvido com Next.js e Firebase. O dashboard possibilita a criação de contas de usuário e criação de novos usuários.',
         link: 'https://ms-dashboard.vercel.app/'
+    },
+    {
+        id: 3,
+        img: `${pokedex}`,
+        title: 'Pokedex',
+        description: 'Primeiro projeto com react e consumo de api. Neste projeto utilizamos a api pokeapi.co',
+        link: 'https://myspokedex.netlify.app/'
     },
 ]
 
@@ -35,9 +43,9 @@ export function Projects() {
     return (
         <div id='projects'>
             <SubTitle title="Portfolio"  subtitle="Projeto em Destaque"/>
-            <div className={`${styles.projects}`}>
+            <div data-aos="zoom-in-up" className={`${styles.projects}`}>
                 <Swiper
-                    modules={[Navigation, Pagination, A11y]}
+                    modules={[Navigation, Pagination]}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
@@ -49,7 +57,8 @@ export function Projects() {
                                 <div className={styles.imgContainer}>
                                     <img src={project.img} alt="project-image" />
                                 </div>
-                                <div className='d-flex flex-column justify-content-between'>
+                                <div className={`d-flex flex-column justify-content-between 
+                                    ${styles.projectSubtitles}`}>
                                     <h3 className='fw-bold'>{project.title}</h3>
                                     <p className='mb-4'>{project.description}</p>
                                     <Button>

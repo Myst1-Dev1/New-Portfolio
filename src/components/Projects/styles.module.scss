@@ -29,3 +29,26 @@
         }
     }
 }
+
+@media(max-width:320px) {
+    .projects {
+        .projectBox {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .imgContainer {
+                width: 250px;
+            }
+
+            .projectSubtitles {
+                margin-left: 20px;
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

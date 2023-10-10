@@ -8,7 +8,8 @@ export function Services() {
         <div id='services' className={`container ${styles.services}`}>
             <SubTitle title="Serviços" subtitle="O que eu ofereço" />
 
-            <div className={`mt-5 row m-auto gap-5 justify-content-center ${styles.serviceContainer}`}>
+            <div data-aos="flip-left" 
+                className={`mt-5 row m-auto gap-5 justify-content-center ${styles.serviceContainer}`}>
                 <div className={`col-md-4 d-flex gap-2 flex-column align-items-center ${styles.serviceBox}`}>
                     <FaCode className={styles.icon} />
                     <h4 className='fw-bold'>Desenvolvimento Web</h4>

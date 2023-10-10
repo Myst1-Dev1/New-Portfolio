@@ -27,7 +27,7 @@ export function Footer() {
                 </div>
             </div>
             <div className={styles.copyright}>
-                <p className='text-center mt-3'>© 2023 Myst1 Dev. Todos os direitos reservados</p>
+                <p className='text-center mt-3'>© 2023 feito com ❤️ por Myst1 Dev</p>
             </div>
         </>
     )

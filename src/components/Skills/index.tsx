@@ -65,7 +65,7 @@ export function Skills() {
     return (
         <div id='skills' className={styles.skills}>
             <SubTitle title="Habilidades" subtitle="Ferramentas que utilizo em meus projetos" />
-            <div className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
+            <div data-aos="fade-up-left" className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
                 {skills.map((skill:any) => (
                     <div key={skill.id} className={`d-flex align-items-center flex-column gap-3 
                         ${styles.skillBox}`}>

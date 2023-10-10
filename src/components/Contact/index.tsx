@@ -27,7 +27,7 @@ export function Contact() {
         <div id='contact'>
             <SubTitle title="Contato" subtitle="Entre em contato" />
 
-            <div className={styles.contact} id='contact'>
+            <div data-aos="zoom-out-left" className={styles.contact} id='contact'>
                 <div className='row m-auto container mt-5'>
                     <div className={`col-md-6 mb-4 d-flex flex-column gap-3 ${styles.contactContainer}`}>
                         <div className='d-flex gap-3'>

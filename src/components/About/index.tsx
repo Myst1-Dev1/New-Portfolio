@@ -10,7 +10,7 @@ export function About() {
         <div id='about' className={`container mb-5 ${styles.about}`}>
             <SubTitle title="Sobre" subtitle="Quem eu sou"/>
 
-            <div className='mt-5 row justify-content-center'>
+            <div data-aos="fade-left" className='mt-5 row justify-content-center'>
                 <div className={`col-md-4 d-flex flex-column gap-4 mb-5 ${styles.aboutSubtitles}`}>
                     <p>
                         Desenvolvedor Front-End com Especialização em ReactJS/Next.js, Comprometido
