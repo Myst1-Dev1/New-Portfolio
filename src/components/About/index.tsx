@@ -3,9 +3,30 @@ import { SubTitle } from '../SubTitle';
 import styles from './styles.module.scss';
 
 import aboutImage from '../../assets/images/aboutImage.jpg';
+import cv from '../../assets/file/Currículo.pdf';
 import { Formation } from '../Formation';
 
 export function About() {
+
+    function handleDownloadCV() {
+        const link = document.createElement('a');
+
+        // Define o atributo "download" para o nome do arquivo desejado
+        link.download = 'Curriculo_4.pdf';
+    
+        // Obtém a URL do arquivo
+        link.href = cv;
+    
+        // Adiciona o link ao documento
+        document.body.appendChild(link);
+    
+        // Aciona o clique no link para iniciar o download
+        link.click();
+    
+        // Remove o link do documento
+        document.body.removeChild(link);
+    }
+
     return (
         <div id='about' className={`container mb-5 ${styles.about}`}>
             <SubTitle title="Sobre" subtitle="Quem eu sou"/>
@@ -18,13 +39,9 @@ export function About() {
                         Busco a evolução contínua para impulsionar mudanças e pretendo me tornar um 
                         Desenvolvedor Sênior com Expertise.
                     </p>
-                    <Button>
-                        <a 
-                            target="_blank" rel="noreferrer"
-                            href="https://www.canva.com/design/DAE2ZI86tZU/FtGwpZgbUYorBDoE4j76sQ/view?utm_content=DAE2ZI86tZU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
-                            Download cv
-                        </a>
-                        </Button>
+                    <Button onClick={handleDownloadCV}>
+                        Download cv
+                    </Button>
                 </div>
                 <div className={`col-md-4 mb-5 ${styles.imgContainer}`}>
                     <img className='img-fluid' src={aboutImage} alt="about-image" />

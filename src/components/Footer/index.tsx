@@ -20,9 +20,15 @@ export function Footer() {
                         <a href="#contact">Contato</a>
                     </div>
                     <div className='d-flex gap-3'>
-                        <FaLinkedinIn className={styles.icon} />
-                        <FaGithub className={styles.icon} />
-                        <FaInstagram className={styles.icon} />
+                        <a href="https://www.linkedin.com/in/myst1-dev/" target="_blank" rel="noreferrer">
+                            <FaLinkedinIn />
+                        </a>
+                        <a href="https://github.com/Myst1-Dev1" target="_blank" rel="noreferrer">
+                            <FaGithub />
+                        </a>
+                        <a href="https://www.instagram.com/myst1_dev/" target="_blank" rel="noreferrer">
+                            <FaInstagram />
+                        </a>
                     </div>
                 </div>
             </div>

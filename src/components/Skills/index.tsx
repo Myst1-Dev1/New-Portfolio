@@ -3,7 +3,9 @@ import styles from './styles.module.scss';
 import html from '../../assets/images/html-5.png';
 import css from '../../assets/images/css-3.png'
 import javascript from '../../assets/images/javascript.png'
+import typescript from '../../assets/images/typescripticon.png';
 import bootstrap from '../../assets/images/bootstrap.png'
+import tailwind from '../../assets/images/tailwindIcon.png';
 import sass from '../../assets/images/sass.png'
 import react from '../../assets/images/react.png'
 import figma from '../../assets/images/figma.png'
@@ -28,33 +30,44 @@ const skills = [
         img: `${javascript}`,
         name: 'Javascript'
     },
-
     {
         id:4,
+        img: `${typescript}`,
+        name: 'Typescript'
+    },
+
+    {
+        id:5,
         img: `${bootstrap}`,
         name: 'Bootstrap'
     },
 
     {
-        id:5,
+        id:6,
+        img: `${tailwind}`,
+        name: 'Tailwind'
+    },
+
+    {
+        id:7,
         img: `${sass}`,
         name: 'Sass'
     },
 
     {
-        id:6,
+        id:8,
         img: `${react}`,
         name: 'React'
     },
 
     {
-        id:7,
+        id:9,
         img: `${figma}`,
         name: 'Figma'
     },
 
     {
-        id:8,
+        id:10,
         img: `${jest}`,
         name: 'Jest'
     },
