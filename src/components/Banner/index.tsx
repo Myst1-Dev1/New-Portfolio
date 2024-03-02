@@ -1,6 +1,6 @@
 import { Button } from '../Button';
 import styles from './styles.module.scss';
-import userPortfolioImage from '../../assets/images/userPortfolioImage.jpg';
+import bannerImg from '../../assets/images/bannerImg.png';
 
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 
@@ -12,13 +12,13 @@ export function Banner() {
                     className='col-md-8 d-flex align-items-center gap-5 mb-5 mt-5'>
                     <div className={`d-flex flex-column gap-3 ${styles.bannerIcons}`}>
                         <a href="https://www.linkedin.com/in/myst1-dev/" target="_blank" rel="noreferrer">
-                            <FaLinkedinIn />
+                            <FaLinkedinIn className={styles.icon} />
                         </a>
                         <a href="https://github.com/Myst1-Dev1" target="_blank" rel="noreferrer">
-                            <FaGithub />
+                            <FaGithub className={styles.icon} />
                         </a>
                         <a href="https://www.instagram.com/myst1_dev/" target="_blank" rel="noreferrer">
-                            <FaInstagram />
+                            <FaInstagram className={styles.icon} />
                         </a>
                     </div>
                     <div className='d-flex flex-column gap-3'>
@@ -30,7 +30,7 @@ export function Banner() {
                     </div>
                 </div>
                 <div data-aos="fade-up" className={`col-md-4 ${styles.imgContainer}`}>
-                    <img src={userPortfolioImage} alt="joão-victor-image" />
+                    <img src={bannerImg} alt="banner-image" />
                 </div>
             </div>
         </div>

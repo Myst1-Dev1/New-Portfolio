@@ -2,7 +2,7 @@ import { Button } from '../Button';
 import { SubTitle } from '../SubTitle';
 import styles from './styles.module.scss';
 
-import aboutImage from '../../assets/images/aboutImage.jpg';
+import userPortfolioImage from '../../assets/images/userPortfolioImage.jpg';
 import cv from '../../assets/file/Currículo.pdf';
 import { Formation } from '../Formation';
 
@@ -44,7 +44,7 @@ export function About() {
                     </Button>
                 </div>
                 <div className={`col-md-4 mb-5 ${styles.imgContainer}`}>
-                    <img className='img-fluid' src={aboutImage} alt="about-image" />
+                    <img className='img-fluid' src={userPortfolioImage} alt="about-image" />
                 </div>
                 <div className='col-md-4'>
                     <Formation />

@@ -4,6 +4,8 @@ import styles from './styles.module.scss';
 import mysFlix from '../../assets/images/mysflix.png';
 import msDashBoard from '../../assets/images/msdash.png';
 import pokedex from '../../assets/images/pkdex.png';
+import corgiBlog from '../../assets/images/corgi-blog.png'
+import dragoTech from '../../assets/images/drago tech.png';
 
 import { Button } from '../Button';
 import { FaArrowRight } from 'react-icons/fa';
@@ -35,6 +37,20 @@ const projects = [
         title: 'Pokedex',
         description: 'Primeiro projeto com react e consumo de api. Neste projeto utilizamos a api pokeapi.co',
         link: 'https://myspokedex.netlify.app/'
+    },
+    {
+        id: 4,
+        img: `${corgiBlog}`,
+        title: 'Corgi Blog',
+        description: 'Primeiro projeto com criação de tema customizado em wordpress, um simples blog sobre corgis.',
+        link: 'https://corgi.blog.digitallabor.com.br/'
+    },
+    {
+        id: 5,
+        img: `${dragoTech}`,
+        title: 'Drago tech',
+        description: 'Ecommerce de técnologia feito com Nextjs, Hygraph(CMS do graphql) e pagamentos integrados com stripe.',
+        link: 'https://drago-tech.vercel.app/'
     },
 ]
 

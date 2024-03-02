@@ -30,14 +30,16 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
+            object-fit: contain;
         }
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 991px) {
     .banner {
+        h2, a .icon {
+            font-size: 15px;
+        }
         .imgContainer {
             width: 200px;
             height: 200px;
