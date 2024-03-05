@@ -7,9 +7,9 @@ import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 export function Banner() {
     return (
         <div id='home' className={styles.banner}>
-            <div className='row m-auto justify-content-center container text-light'>
+            <div className='row justify-content-center container text-light'>
                 <div data-aos="fade-down" 
-                    className='col-md-8 d-flex align-items-center gap-5 mb-5 mt-5'>
+                    className='col-md-8  d-flex align-items-center gap-5 mb-5 mt-5'>
                     <div className={`d-flex flex-column gap-3 ${styles.bannerIcons}`}>
                         <a href="https://www.linkedin.com/in/myst1-dev/" target="_blank" rel="noreferrer">
                             <FaLinkedinIn className={styles.icon} />
@@ -21,7 +21,7 @@ export function Banner() {
                             <FaInstagram className={styles.icon} />
                         </a>
                     </div>
-                    <div className='d-flex flex-column gap-3'>
+                    <div className={`${styles.bannerSubtitles} d-flex flex-column gap-3`}>
                         <div>
                             <h2>Olá, eu sou o João</h2>
                             <h2 className={styles.red}>Desenvolvedor Front End</h2>

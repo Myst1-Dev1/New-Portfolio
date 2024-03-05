@@ -49,7 +49,7 @@ const projects = [
         id: 5,
         img: `${dragoTech}`,
         title: 'Drago tech',
-        description: 'Ecommerce de técnologia feito com Nextjs, Hygraph(CMS do graphql) e pagamentos integrados com stripe.',
+        description: 'Ecommerce de técnologia feito com Nextjs, Hygraph(CMS do graphql) e pagamentos integrados com stripe. No momento com erro na criação de conta.',
         link: 'https://drago-tech.vercel.app/'
     },
 ]
