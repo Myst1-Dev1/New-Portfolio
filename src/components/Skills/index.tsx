@@ -12,6 +12,12 @@ import figma from '../../assets/images/figma.png'
 import jest from '../../assets/images/jest.png'
 import { SubTitle } from '../SubTitle';
 
+type SkillsType = {
+    id:number,
+    img:string,
+    name:string
+}
+
 const skills = [
     {
         id:1,
@@ -79,7 +85,7 @@ export function Skills() {
         <div id='skills' className={styles.skills}>
             <SubTitle title="Habilidades" subtitle="Ferramentas que utilizo em meus projetos" />
             <div data-aos="fade-up-left" className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
-                {skills.map((skill:any) => (
+                {skills.map((skill:SkillsType) => (
                     <div key={skill.id} className={`d-flex align-items-center flex-column gap-3 
                         ${styles.skillBox}`}>
                         <div className={styles.imgContainer}>

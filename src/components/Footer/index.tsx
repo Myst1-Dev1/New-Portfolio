@@ -26,7 +26,7 @@ export function Footer() {
                         <a href="https://github.com/Myst1-Dev1" target="_blank" rel="noreferrer">
                             <FaGithub />
                         </a>
-                        <a href="https://www.instagram.com/myst1_dev/" target="_blank" rel="noreferrer">
+                        <a href="https://www.instagram.com/jv1555_dev/" target="_blank" rel="noreferrer">
                             <FaInstagram />
                         </a>
                     </div>

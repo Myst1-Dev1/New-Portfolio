@@ -24,7 +24,7 @@
     }
 
     .imgContainer {
-        width: 300px;
+        max-width: 400px;
         height: 300px;
 
         img {
@@ -54,5 +54,14 @@
             width: 180px;
             font-size: 12px;
         }
+    }
+}
+
+@media(max-width: 767px) {
+    .banner {
+        .bannerContent {
+            margin-top: 70px!important;
+        }
+
     }
 }

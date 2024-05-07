@@ -6,14 +6,38 @@
             border: 1px solid #CCC4C4;
             border-radius: 10px;
             padding: 10px;
-            width: 300px;
+            max-width: 500px;
+            animation: borderAnimation 4s infinite alternate linear;
+
+            @keyframes borderAnimation {
+                0% {
+                    border-bottom-color: var(--red-500); /* Vermelho */
+                    border-left-color: #CCC4C4; /* Cinza */
+                }
+                25% {
+                    border-top-color: var(--red-500); /* Vermelho */
+                    border-left-color: var(--red-500); /* Vermelho */
+                }
+                50% {
+                    border-top-color: #CCC4C4; /* Cinza */
+                    border-right-color: var(--red-500); /* Vermelho */
+                }
+                75% {
+                    border-bottom-color: #CCC4C4; /* Cinza */
+                    border-right-color: #CCC4C4; /* Cinza */
+                }
+                100% {
+                    border-bottom-color: var(--red-500); /* Vermelho */
+                    border-left-color: #CCC4C4; /* Cinza */
+                }
+            }
 
             .icon {
                 font-size: 30px;
             }
 
             h4 {
-                font-size: 15px;
+                font-size: 20px;
             }
         }
     }

@@ -5,6 +5,17 @@
         place-items: center;
         grid-template-columns: repeat(5, 1fr);
 
+        .imgContainer {
+            width: 40px;
+            height: 40px;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }  
+        }
+
         .skillBox {
             background-color: #141414;
             width: 100px;
@@ -14,17 +25,6 @@
             margin-bottom: 30px;
             transition: 0.3s;
 
-            .imgContainer {
-                width: 40px;
-                height: 40px;
-        
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }  
-            }
-
             h6 {
                 font-size: 15px;
             }
@@ -33,10 +33,14 @@
                 filter: brightness(0.8);
             }
         }
+
+        .description {
+            transition: 0.3s;
+        }
     }
 }
 
-@media(max-width:430px) {
+@media(max-width:500px) {
     .skills {
         .skillsContainer {
             grid-template-columns: repeat(3, 1fr);

@@ -1,27 +1,12 @@
-import { useRef } from 'react';
 import { Button } from '../Button';
 import { SubTitle } from '../SubTitle';
+import { ContactFuncionality } from './contact';
 import styles from './styles.module.scss';
 
-import emailjs from '@emailjs/browser';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaPaperPlane } from 'react-icons/fa';
 
 export function Contact() {
-    const form:any = useRef();
-
-    function sendEmail(e:any) {
-        e.preventDefault();
-
-        emailjs.sendForm('service_88ls40o', 'template_qhba9q9', form.current, '7ywCWQ6iuPOTnxXC_')
-          .then((result) => {
-              alert('Mensagem enviada com sucesso !');
-              console.log(result);
-          }, (error) => {
-              alert('Ocorreu um erro ao enviar a mensagem !');
-              console.log('tivemos um erro', error)
-          });
-          e.target.reset();
-    }
+    const { form, sendEmail } = ContactFuncionality();
 
     return (
         <div id='contact'>
@@ -67,9 +52,11 @@ export function Contact() {
                         <div className={styles.inputBox}>
                             <textarea placeholder='Mensagem' name='mensagem' />
                         </div>
-                        <Button type='submit'>
-                            Enviar <FaPaperPlane className="text-light ms-5" />
-                        </Button>
+                        <div className='m-auto'>
+                            <Button type='submit'>
+                                Enviar <FaPaperPlane className="text-light ms-5" />
+                            </Button>
+                        </div>
                     </form>
                 </div>
             </div>

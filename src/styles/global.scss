@@ -76,11 +76,8 @@ a {
       }
 }
 
-@media(max-width: 430px) {
+@media(max-width: 480px) {
     .swiper-button-next, .swiper-button-prev {
-        color: #9ca3af;
-        margin-top: 20px;
-        width: 30px;
         display: none;
     }
 }

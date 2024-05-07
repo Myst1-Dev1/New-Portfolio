@@ -18,7 +18,7 @@ export function NavBar({ onIsNavBarOpen ,onHandleCloseNavBar } :NavBarProps) {
                 item.addEventListener('click', onHandleCloseNavBar);
             })
         }
-    }, [onIsNavBarOpen]);
+    }, [onHandleCloseNavBar, onIsNavBarOpen]);
 
     return (
         <div className={styles.navBar}>

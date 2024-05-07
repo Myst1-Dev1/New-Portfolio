@@ -3,30 +3,12 @@ import { SubTitle } from '../SubTitle';
 import styles from './styles.module.scss';
 
 import userPortfolioImage from '../../assets/images/userPortfolioImage.jpg';
-import cv from '../../assets/file/Currículo.pdf';
 import { Formation } from '../Formation';
+import { AboutFunctionality } from './about';
 
 export function About() {
-
-    function handleDownloadCV() {
-        const link = document.createElement('a');
-
-        // Define o atributo "download" para o nome do arquivo desejado
-        link.download = 'Curriculo_4.pdf';
+    const { handleDownloadCV } = AboutFunctionality();
     
-        // Obtém a URL do arquivo
-        link.href = cv;
-    
-        // Adiciona o link ao documento
-        document.body.appendChild(link);
-    
-        // Aciona o clique no link para iniciar o download
-        link.click();
-    
-        // Remove o link do documento
-        document.body.removeChild(link);
-    }
-
     return (
         <div id='about' className={`container mb-5 ${styles.about}`}>
             <SubTitle title="Sobre" subtitle="Quem eu sou"/>
