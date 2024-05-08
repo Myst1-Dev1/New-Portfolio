@@ -1,5 +1,4 @@
 .contact {
-    margin-bottom: 100px;
 
     .contactContainer {
 
@@ -9,7 +8,8 @@
         }
 
         h6 {
-            color: var(--gray-500);
+            //color: var(--gray-500);
+            font-size: 10px;
         }
     }
 
@@ -35,6 +35,43 @@
     }
 }
 
+@media(max-width:1200px) {
+    .contactContainer {
+
+        .icon {
+            color: var(--red-500);
+            font-size: 15px;
+        }
+
+        h5 {
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    form {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:494px) {
+    .contactContainer {
+
+        .icon {
+            color: var(--red-500);
+            font-size: 10px!important;
+        }
+
+        h5 {
+            font-size: 12px!important;
+        }
+
+        h6 {
+            font-size: 7px!important;
+        }
+    }
+}
 
 @media(max-width:430px) {
     .contact {

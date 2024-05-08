@@ -26,7 +26,7 @@ export function Projects() {
                     {projects.map(project => (
                         <SwiperSlide key={project.id}>
                             <div 
-                                className={`d-flex wrap justify-content-center gap-5 mt-5 mb-5 ${styles.projectBox}`}>
+                                className={`container d-flex wrap justify-content-center gap-5 mt-5 mb-5 ${styles.projectBox}`}>
                                 <div className={styles.imgContainer}>
                                     <img src={project.img} alt="project-image" />
                                 </div>

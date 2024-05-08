@@ -3,18 +3,24 @@ import { SubTitle } from '../SubTitle';
 import { ContactFuncionality } from './contact';
 import styles from './styles.module.scss';
 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
 import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaPaperPlane } from 'react-icons/fa';
+import { LatLngExpression } from 'leaflet';
 
 export function Contact() {
     const { form, sendEmail } = ContactFuncionality();
+
+    const position:LatLngExpression | undefined = [-22.77709907415005, -42.967335232971834];
 
     return (
         <div id='contact'>
             <SubTitle title="Contato" subtitle="Entre em contato" />
 
-            <div data-aos="zoom-out-left" className={styles.contact} id='contact'>
-                <div className='row m-auto container mt-5'>
-                    <div className={`col-md-6 mb-4 d-flex flex-column gap-3 ${styles.contactContainer}`}>
+            <div data-aos="zoom-out-left" className={`container m-auto row ${styles.contact}`} id='contact'>
+                <div className='col-md-6 d-flex flex-column gap-5 m-auto container mt-5'>
+                    <div className={`mb-4 d-flex wrap justify-content-center gap-4 ${styles.contactContainer}`}>
                         <div className='d-flex gap-3'>
                             <FaPhone className={styles.icon} />
                             <div>
@@ -37,7 +43,7 @@ export function Contact() {
                             </div>
                         </div>
                     </div>
-                    <form ref={form} onSubmit={sendEmail} className='col-md-6 d-flex flex-column gap-4'>
+                    <form ref={form} onSubmit={sendEmail} className='d-flex flex-column gap-4'>
                         <div className='row'>
                             <div className={`col-md-6 ${styles.inputBox}`}>
                                 <input type="text" placeholder='Nome' name='nome' />
@@ -58,6 +64,17 @@ export function Contact() {
                             </Button>
                         </div>
                     </form>
+                </div>
+                <div className={`${styles.map} col-md-6 m-auto`}>
+                    <MapContainer center={position} zoom={12} style={{ height: "400px" }}>
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        />
+                        <Marker position={position}>
+                            <Popup>Localização</Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
         </div>
