@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import html from '../../assets/images/html-5.png';
 import css from '../../assets/images/css-3.png'
 import javascript from '../../assets/images/javascript.png'
-import typescript from '../../assets/images/typescripticon.png';
+import typescript from '../../assets/images/typescriptIcon.png';
 import bootstrap from '../../assets/images/bootstrap.png'
 import tailwind from '../../assets/images/tailwindIcon.png';
 import sass from '../../assets/images/sass.png'
