@@ -41,6 +41,12 @@
 }
 
 @media(max-width:430px) {
+    .footer {
+        h5 {
+            font-size: 1rem;
+        }
+    }
+
     .copyright {
         border-bottom: 1px solid var(--gray-700);
     }

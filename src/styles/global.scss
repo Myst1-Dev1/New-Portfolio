@@ -21,6 +21,10 @@
     height: 10px;
 }
 
+html {
+    scroll-padding-top: 100px;
+}
+
 body {
     transition: 0.3s;
 }
@@ -38,7 +42,7 @@ a {
 }
 
 .dark-mode {
-    background-color: #000;
+    background-color: #191910;
     color: #fff;
 
     input, textarea {
@@ -49,6 +53,14 @@ a {
 .swiper-button-next, .swiper-button-prev {
     color: #9ca3af;
 }
+
+.swiper-slide-active {
+    transform: scale(1.1); /* Aumente um pouco o slide ativo */
+}
+
+// .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+//     display: none; /* Opcional: esconda as sombras laterais */
+// }
 
 .loading {
     background-color: #000;
