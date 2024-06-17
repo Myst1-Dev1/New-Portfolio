@@ -8,6 +8,15 @@ import 'leaflet/dist/leaflet.css';
 
 import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaPaperPlane } from 'react-icons/fa';
 import { LatLngExpression } from 'leaflet';
+import L from 'leaflet';
+import customIconUrl from '../../../public/map-marker.png';
+
+const customIcon = new L.Icon({
+  iconUrl: customIconUrl,
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32],
+});
 
 export function Contact() {
     const { form, sendEmail } = ContactFuncionality();
@@ -71,7 +80,7 @@ export function Contact() {
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         />
-                        <Marker position={position}>
+                        <Marker position={position} icon={customIcon}>
                             <Popup>Localização</Popup>
                         </Marker>
                     </MapContainer>
