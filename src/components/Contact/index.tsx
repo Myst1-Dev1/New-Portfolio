@@ -12,16 +12,16 @@ import L from 'leaflet';
 import customIconUrl from '../../../public/map-marker.png';
 
 const customIcon = new L.Icon({
-  iconUrl: customIconUrl,
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
-  popupAnchor: [0, -32],
+    iconUrl: customIconUrl,
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
 });
 
 export function Contact() {
-    const { form, sendEmail } = ContactFuncionality();
+    const { form, sendEmail, error, isLoading, handlePhone } = ContactFuncionality();
 
-    const position:LatLngExpression | undefined = [-22.77709907415005, -42.967335232971834];
+    const position: LatLngExpression = [-22.77709907415005, -42.967335232971834];
 
     return (
         <div id='contact'>
@@ -56,20 +56,27 @@ export function Contact() {
                         <div className='row'>
                             <div className={`col-md-6 ${styles.inputBox}`}>
                                 <input type="text" placeholder='Nome' name='nome' />
+                                {error.nome && <span className='text-danger mt-2'>Preencha este campo</span>}
                             </div>
                             <div className={`col-md-6 ${styles.inputBox}`}>
                                 <input type="email" placeholder='Email' name='email' />
+                                {error.email && <span className='text-danger mt-2'>Preencha este campo</span>}
                             </div>
                         </div>
                         <div className={styles.inputBox}>
-                            <input type="tel" placeholder='Número' name='numero' />
+                            <input type="tel" placeholder='Número' name='numero' onKeyUp={(e) => handlePhone(e)} maxLength={15} />
+                            {error.numero && <span className='text-danger mt-2'>Preencha este campo</span>}
                         </div>
                         <div className={styles.inputBox}>
                             <textarea placeholder='Mensagem' name='mensagem' />
+                            {error.mensagem && <span className='text-danger mt-2'>Preencha este campo</span>}
                         </div>
                         <div className='m-auto'>
                             <Button type='submit'>
-                                Enviar <FaPaperPlane className="text-light ms-5" />
+                                {isLoading ? 
+                                <div className="spinner-border text-light" role="status">
+                                </div>
+                                : <span>Enviar <FaPaperPlane className="text-light ms-1" /></span>}
                             </Button>
                         </div>
                     </form>
@@ -87,5 +94,5 @@ export function Contact() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
