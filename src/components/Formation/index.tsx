@@ -10,7 +10,7 @@ export function Formation() {
                  ${styles.formationContainer}`}>
                     <div className='d-flex gap-2'>
                         <FaGraduationCap className={styles.icon} />
-                        <h6>Análise e Desenvolvimento de <br /> sistemas - Unifatecie (cursando)</h6>
+                        <h6>Análise e Desenvolvimento de <br /> sistemas - Unifatecie - 2022 - 2024 </h6>
                     </div>
                     <div className='d-flex gap-2'>
                         <FaGraduationCap className={styles.icon} />
