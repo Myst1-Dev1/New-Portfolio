@@ -1,0 +1,179 @@
+.portfolioNew {
+    // padding: 100px 20px;
+    .projectNew {
+        width: 100%;
+        min-height: 100vh;
+    
+        .container {
+            padding: 100px 20px;
+            margin: auto;
+            gap: 25px;
+    
+            .box {
+                max-width: 350px;
+                height: 200px;
+                position: relative;
+                overflow: hidden;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+                animation: fadeIn 1s ease;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+    
+                button {
+                    background-color: var(--red-500);
+                    border-radius: 5px;
+                    color: #fff;
+                    padding: 10px;
+                    font-size: 15px;
+                    position: absolute;
+                    bottom: -100%;
+                    left: 50%;
+                    border: none;
+                    transform: translate(-50%, 20px);
+                    transition: 0.3s;
+    
+                    &:hover {
+                        filter: brightness(0.8);
+                    }
+                }
+    
+                &:hover button {
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+    
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+    }
+    
+    .projectDetails {
+        padding: 20px;
+        margin: auto;
+        transition: opacity 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        // animation: fadeIn 1s ease;
+    
+        .container {
+            max-width: 950px;
+            width: 100%;
+    
+            .imgContainer {
+                max-width: 950px;
+                width: 100%;
+                height: 350px;
+                margin: auto;
+                margin-top: 30px;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    object-position: top;
+                    border-radius: 5px;
+                    // transition: transform 3.5s linear;
+                    // transform: translateY(0);
+                }
+            
+                // &:hover img {
+                //     transform: translateY(-80%);
+                // }
+            }
+        
+            .details {
+                display: flex;
+                justify-content: flex-start;
+                align-items: start;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 30px;
+        
+                h6 {
+                    font-size: 20px;
+                }
+    
+                p {
+                    text-align: start;
+                }
+    
+                .icon {
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {color:var(--red-500)}
+                }
+        
+                a {
+                    text-decoration: none;
+                    max-width: 120px;
+                    width: 100%;
+    
+                    button {
+                        background-color: var(--red-500);
+                        border-radius: 10px;
+                        padding: 10px;
+                        width: 100%;
+                        border:none;
+                        transition: 0.3s;
+            
+                        &:hover {
+                            filter: brightness(0.8);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .projectPerspective {
+            margin-top: 30px;
+            max-width: 950px;
+            width: 100%;
+            overflow: hidden;
+    
+            .imgContainer {
+                max-width: 270px;
+                height: 150px;
+                cursor: pointer;
+    
+                img {
+                    width: 100%; height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    
+    @media(max-width:580px) {
+        .projectDetails {
+            .container{
+                .imgContainer{
+                    height: 200px;
+    
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+    
+            .projectPerspective {
+                .imgContainer {
+                    height: 80px;
+                    
+                    img {
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

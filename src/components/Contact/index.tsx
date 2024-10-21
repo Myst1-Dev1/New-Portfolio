@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaPaperPlane } from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 import { LatLngExpression } from 'leaflet';
 import L from 'leaflet';
 import customIconUrl from '../../../public/map-marker.png';
@@ -21,15 +21,15 @@ const customIcon = new L.Icon({
 export function Contact() {
     const { form, sendEmail, error, isLoading, handlePhone } = ContactFuncionality();
 
-    const position: LatLngExpression = [-22.77709907415005, -42.967335232971834];
+    const position: LatLngExpression = [-22.9068, -43.1729];
 
     return (
         <div id='contact'>
             <SubTitle title="Contato" subtitle="Entre em contato" />
 
-            <div data-aos="zoom-out-left" className={`container m-auto row ${styles.contact}`} id='contact'>
+            <div data-aos="zoom-out-left" className={`mt-5 container m-auto row ${styles.contact}`} id='contact'>
                 <div className='col-md-6 d-flex flex-column gap-5 m-auto container mt-5'>
-                    <div className={`mb-4 d-flex wrap justify-content-center gap-4 ${styles.contactContainer}`}>
+                    {/* <div className={`mb-4 d-flex wrap justify-content-center gap-4 ${styles.contactContainer}`}>
                         <div className='d-flex gap-3'>
                             <FaPhone className={styles.icon} />
                             <div>
@@ -51,7 +51,7 @@ export function Contact() {
                                 <h6>Brasil - Rio de Janeiro</h6>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <form ref={form} onSubmit={sendEmail} className='d-flex flex-column gap-4'>
                         <div className='row'>
                             <div className={`col-md-6 ${styles.inputBox}`}>

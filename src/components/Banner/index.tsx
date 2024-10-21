@@ -1,13 +1,12 @@
-import { motion } from 'framer-motion';
-import { Button } from '../Button';
-import styles from './styles.module.scss';
-import bannerImg from '../../assets/images/bannerImg.png';
 
-import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
+import { Button } from '../Button';
 import { BannerFunctionality } from './banner';
+import styles from './styles.module.scss';
+
+import { FaLinkedinIn, FaGithub, FaInstagram, FaAngular, FaCss3, FaGitAlt, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 
 export function Banner() {
-    const { animate, letters, ocupattionLetters } = BannerFunctionality();
+    const { addToRefs } = BannerFunctionality();
 
     return (
         <div id='home' className={styles.banner}>
@@ -15,56 +14,45 @@ export function Banner() {
                 <div data-aos="fade-down" 
                     className={`${styles.bannerContent} col-md-8 d-flex align-items-center gap-5 mb-5 mt-5`}>
                     <div className={`d-flex flex-column gap-3 ${styles.bannerIcons}`}>
-                        <a href="https://www.linkedin.com/in/myst1-dev/" target="_blank" rel="noreferrer">
+                        <a className='banner-icon' href="https://www.linkedin.com/in/myst1-dev/" target="_blank" rel="noreferrer">
                             <FaLinkedinIn className={styles.icon} />
                         </a>
-                        <a href="https://github.com/Myst1-Dev1" target="_blank" rel="noreferrer">
+                        <a className='banner-icon' href="https://github.com/Myst1-Dev1" target="_blank" rel="noreferrer">
                             <FaGithub className={styles.icon} />
                         </a>
-                        <a href="https://www.instagram.com/jv1555_dev/" target="_blank" rel="noreferrer">
+                        <a className='banner-icon' href="https://www.instagram.com/jv1555_dev/" target="_blank" rel="noreferrer">
                             <FaInstagram className={styles.icon} />
                         </a>
                     </div>
                     <div className={`${styles.bannerSubtitles} d-flex flex-column gap-3`}>
                         <div className={styles.bannerText}>
-                            <h2>
-                            {letters.map((letter, i) => (
-                                <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={animate && { opacity: 1, y: 0 }}
-                                transition={{
-                                    delay: i * 0.1,
-                                    duration: 0.5,
-                                    ease: [0.4, 0, 0.2, 1],
-                                }}
-                                >
-                                {letter}
-                                </motion.span>
-                            ))}
-                            </h2>
-                            <h2 className={styles.red}>
-                            {ocupattionLetters.map((letter, i) => (
-                                <motion.span
-                                key={i}
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={animate && { opacity: 1, y: 0 }}
-                                transition={{
-                                    delay: i * 0.1,
-                                    duration: 0.5,
-                                    ease: [0.4, 0, 0.2, 1],
-                                }}
-                                >
-                                {letter}
-                                </motion.span>
-                            ))}
-                            </h2>
+                            <h2 ref={addToRefs}>Olá, eu sou o João</h2>
+                            <h2 ref={addToRefs} className={`occupation-text ${styles.red}`}>Desenvolvedor Front End</h2>
                         </div>
-                        <Button><a href="#contact">Entre em contato</a></Button>
+                        <Button id='btn'><a href="#contact">Entre em contato</a></Button>
                     </div>
                 </div>
-                <div data-aos="fade-up" className={`col-md-4 ${styles.imgContainer}`}>
-                    <img src={bannerImg} alt="banner-image" />
+                <div className={`cube col-md-4 ${styles.stageCubeCont}`}>
+                    <div className={`${styles.cubespinner}`}>
+                        <div className={styles.face1}>
+                            <FaAngular />
+                        </div>
+                        <div className={styles.face2}>
+                            <FaHtml5 />
+                        </div>
+                        <div className={styles.face3}>
+                            <FaCss3 />
+                        </div>
+                        <div className={styles.face4}>
+                            <FaReact />
+                        </div>
+                        <div className={styles.face5}>
+                            <FaJsSquare />
+                        </div>
+                        <div className={styles.face6}>
+                            <FaGitAlt />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

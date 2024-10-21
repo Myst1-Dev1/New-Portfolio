@@ -11,6 +11,11 @@ import react from '../../assets/images/react.png'
 import figma from '../../assets/images/figma.png'
 import jest from '../../assets/images/jest.png'
 import { SubTitle } from '../SubTitle';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 type SkillsType = {
     id:number,
@@ -81,12 +86,18 @@ const skills = [
 ]
 
 export function Skills() {
+    
+    useGSAP(() => {
+        gsap.fromTo('.skill', { opacity:0, height:0 }, { opacity:1, height:102, stagger:0.3, duration:0.4, ease:'elastic.inOut', 
+            scrollTrigger: { trigger:'.skill', scrub:1, toggleActions: 'start none none none' } });
+    }, []);
+    
     return (
         <div id='skills' className={styles.skills}>
             <SubTitle title="Habilidades" subtitle="Ferramentas que utilizo em meus projetos" />
-            <div data-aos="fade-up-left" className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
+            <div className={`container mt-5 mb-5 ${styles.skillsContainer}`}>
                 {skills.map((skill:SkillsType) => (
-                    <div key={skill.id} className={`d-flex align-items-center flex-column gap-3 
+                    <div key={skill.id} className={`skill d-flex align-items-center flex-column gap-3 
                         ${styles.skillBox}`}>
                         <div className={styles.imgContainer}>
                             <img src={skill.img} alt="skill-image" />

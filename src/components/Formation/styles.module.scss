@@ -1,13 +1,72 @@
 .formation {
-    margin-left: 40px;
+    
+    .formationBox {
+        background-color: #303030;
+        border-radius: 13px;
+        max-width: 350px;
+        height: 150px;
+        padding: 10px;
+        width: 100%;
+        color: #fff;
+        transition: 0.3s;
 
-    .formationContainer {
-       .wrap {
-        flex-wrap: wrap;
-       }
+        h2 {
+            font-size: 19px;
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 12px;
+        }
+
+        &:hover {
+            background-color: var(--red-500);
+        }
+    }
+
+    .spinnerBox {
+        border: 1px solid var(--gray-500);
+        padding: 10px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+
+        .spinner {
+            width: 10px;
+            height: 10px;
+            flex-shrink: 0;
+        }
+    }
+
+    .line {
+        width: 2px;
+        height: 170px;
+        background-color: var(--gray-500);
+    }
+}
+
+@media(max-width:766px) {
+    .formation {
+        .formationBox {
+            h2 { font-size: 12px; }
+
+            span { font-size: 10px; }
+        }
+    }
+}
+
+@media(max-width:440px) {
+    .formation {
         
-        .icon {
-            font-size: 20px;
+        .leftFormation { margin-top: 3.5rem!important; }
+
+        .rightFormation { margin-bottom: 3.5rem!important; }
+
+        .formationBox {
+            height: 100px;
+            h2 { font-size: 9px; }
+
+            span { font-size: 6px; }
         }
     }
 }

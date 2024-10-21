@@ -8,6 +8,8 @@
 :root {
     --red-500:#EF4444;
 
+    --zinc-400:#A1A1AA;
+
     --gray-500:#6B7280;
     --gray-700:#334155;
 
@@ -54,9 +56,37 @@ a {
     color: #9ca3af;
 }
 
-.swiper-slide-active {
-    transform: scale(1.1); /* Aumente um pouco o slide ativo */
+.swiper-slide {
+    width: auto!important;
+    flex-shrink: 0!important;
+    display: block!important;
+    height: 100%!important;
+    max-height: 100%!important;
+    cursor: pointer!important;
 }
+
+.swiper-slide img {
+    max-width: 150px!important;
+    height: auto!important;
+    object-fit: cover!important;
+    margin-left: 20px!important;
+}
+
+@media(max-width:400px) {
+    .swiper-slide img {
+        max-width: 130px!important;
+    }
+    
+}
+
+.swiper-wrapper {
+    max-width: 950px!important;
+    width: 100%!important;
+}
+
+// .swiper-slide-active {
+//     transform: scale(1.1); /* Aumente um pouco o slide ativo */
+// }
 
 // .swiper-slide-shadow-left, .swiper-slide-shadow-right {
 //     display: none; /* Opcional: esconda as sombras laterais */

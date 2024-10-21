@@ -3,9 +3,11 @@
     background-color: var(--red-500);
     padding: 10px;
     width: 200px;
+    height: 50px;
     font-size: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    flex-shrink: 0;
 
     &:hover {
         filter: brightness(0.8);
