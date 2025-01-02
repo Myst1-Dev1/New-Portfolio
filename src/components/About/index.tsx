@@ -12,9 +12,8 @@ export function About() {
     const { handleDownloadCV } = AboutFunctionality();
     
     useGSAP(() => {
-        gsap.fromTo('.about', { opacity:0, x:0 }, {
-            opacity:1,
-            x:1,
+        gsap.fromTo('.about', { y:0 }, {
+            y:100,
             ease:'power1.in',
             duration: 0.4,
             scrollTrigger: {
