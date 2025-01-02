@@ -54,7 +54,7 @@ export function ProjectsNew() {
     useGSAP(() => {
         if(!showDetails) {
         gsap.fromTo('.box', { opacity:0, y:0 }, { opacity:1, y:20, ease:'bounce', stagger:0.4, duration:0.4, 
-            scrollTrigger: { trigger:'.box', scrub:1, toggleActions: 'start none none none' }
+            scrollTrigger: { trigger:'.box', scrub:1, once:true, toggleActions: 'start none none none' }
          });
         }
          ScrollTrigger.refresh();

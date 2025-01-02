@@ -13,9 +13,6 @@ import jest from '../../assets/images/jest.png'
 import { SubTitle } from '../SubTitle';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 type SkillsType = {
     id:number,
@@ -89,7 +86,7 @@ export function Skills() {
     
     useGSAP(() => {
         gsap.fromTo('.skill', { opacity:0, height:0 }, { opacity:1, height:102, stagger:0.3, duration:0.4, ease:'elastic.inOut', 
-            scrollTrigger: { trigger:'.skill', scrub:1, toggleActions: 'start none none none' } });
+            scrollTrigger: { trigger:'.skill', scrub:1, once:true, toggleActions: 'start none none none' } });
     }, []);
     
     return (

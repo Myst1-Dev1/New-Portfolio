@@ -4,33 +4,34 @@ import styles from './styles.module.scss';
 
 import userPortfolioImage from '../../assets/images/aboutImg.jpg';
 import { AboutFunctionality } from './about';
-// import { useGSAP } from '@gsap/react';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import gsap from 'gsap';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
-// gsap.registerPlugin(ScrollTrigger);
 
 export function About() {
     const { handleDownloadCV } = AboutFunctionality();
     
-    // useGSAP(() => {
-    //     gsap.to('.about', {
-    //         translateX:0,
-    //         ease:'power1.in',
-    //         duration: 0.4,
-    //         scrollTrigger: {
-    //             trigger: '.about',
-    //             scrub:1,
-    //             toggleActions: 'start none none none'
-    //         }
-    //     });
-    // }, []);
+    useGSAP(() => {
+        gsap.fromTo('.about', { opacity:0, x:0 }, {
+            opacity:1,
+            x:1,
+            ease:'power1.in',
+            duration: 0.4,
+            scrollTrigger: {
+                trigger: '.about',
+                once:true,
+                start:'top bottom',
+                scrub:1,
+                toggleActions: 'start none none none'
+            }
+        });
+    }, []);
 
     return (
         <div id='about' className={`container mb-5 ${styles.about}`}>
             <SubTitle title="Sobre" subtitle="Quem eu sou"/>
 
-            <div data-aos="fade-left" className='mt-5 row gap-3 align-items-center justify-content-center'>
+            <div className='about mt-5 row gap-3 align-items-center justify-content-center'>
                 <div className={`col-md-6 mb-5 ${styles.imgContainer}`}>
                     <img className='img-fluid' src={userPortfolioImage} alt="about-image" />
                 </div>

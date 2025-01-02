@@ -4,18 +4,14 @@ import styles from './styles.module.scss';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
 export function Formation() {
 
     useGSAP(() => {
         gsap.fromTo('.formation-fade', { opacity:0 }, { opacity:1, stagger:0.4, duration:0.4, ease:'power1.inOut',
-            scrollTrigger: { trigger:'.formation-fade', scrub:1, toggleActions: 'start none none none' } 
+            scrollTrigger: { trigger:'.formation-fade', scrub:1, once:true, toggleActions: 'start none none none' } 
          });
          gsap.fromTo('.line', { opacity:0, height:0 }, { opacity:1, height:170, stagger:0.4, duration:0.4, ease: 'power1.inOut',
-            scrollTrigger: { trigger:'.line', scrub:1, toggleActions: 'start none none none' } 
+            scrollTrigger: { trigger:'.line', scrub:1, once:true, toggleActions: 'start none none none' } 
           });
     }, []);
 
