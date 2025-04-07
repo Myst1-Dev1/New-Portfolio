@@ -5,7 +5,7 @@ export function AboutFunctionality() {
         const link = document.createElement('a');
 
         // Define o atributo "download" para o nome do arquivo desejado
-        link.download = 'Curriculo_4.pdf';
+        link.download = 'Curriculo.pdf';
     
         // Obtém a URL do arquivo
         link.href = cv;

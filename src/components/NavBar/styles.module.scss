@@ -1,23 +1,4 @@
 .navBar {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 1s ease;
-
-    @keyframes fadeIn {
-        0%{
-            opacity: 0;
-        }
-    }
-
     .icon {
         color: #fff;
         font-size: 20px;
@@ -36,14 +17,37 @@
     nav {
         a {
             text-decoration: none;
-            color: #fff;
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 17px;
             transition: 0.3s;
+            cursor: pointer;
     
             &:hover {
                 color: var(--red-500);
             }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+        width: 100%;
+        min-height: 100vh;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: #fff!important;
+        }
+
+        .nav {
+            flex-direction: column;
         }
     }
 }

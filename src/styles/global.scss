@@ -1,8 +1,10 @@
+@import "tailwindcss";
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Helvetica, sans-serif
 }
 
 :root {
@@ -16,6 +18,10 @@
     --swiper-pagination-color: #EF4444;
 }
 
+body {
+    background-color: #eaeaec;
+}
+
 .swiper-pagination-bullet {
     background-color: var(--red-500);
     display: inline-block;
@@ -25,6 +31,7 @@
 
 html {
     scroll-padding-top: 100px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,6 +44,7 @@ button {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .wrap {
@@ -47,8 +55,25 @@ a {
     background-color: #191910;
     color: #fff;
 
-    input, textarea {
+    a {
         color: #fff;
+    }
+    
+    input::placeholder, textarea::placeholder {
+        color: #fff;
+    }
+
+    .leaflet-container span {
+        color:#000;
+    }
+
+    header {
+        color: #fff;
+        background-color: #202020;
+
+        .ctnButton {
+            color: #fff;
+        }
     }
 }
 
@@ -103,6 +128,12 @@ a {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 200px;
+    }
+}
+
+.subtitle {
+    h6 {
+        color: var(--gray-500);
     }
 }
 

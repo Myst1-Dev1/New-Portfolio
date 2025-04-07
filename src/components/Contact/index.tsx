@@ -1,5 +1,3 @@
-import { Button } from '../Button';
-import { SubTitle } from '../SubTitle';
 import { ContactFuncionality } from './contact';
 import styles from './styles.module.scss';
 
@@ -10,6 +8,9 @@ import { FaPaperPlane } from 'react-icons/fa';
 import { LatLngExpression } from 'leaflet';
 import L from 'leaflet';
 import customIconUrl from '../../../public/map-marker.png';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const customIcon = new L.Icon({
     iconUrl: customIconUrl,
@@ -23,65 +24,61 @@ export function Contact() {
 
     const position: LatLngExpression = [-22.9068, -43.1729];
 
+    useGSAP(() => {
+        ScrollTrigger.create({
+            trigger: '#contact',
+            start: 'top 90%',
+            once: true,
+            onEnter:() => {
+                const tl = gsap.timeline({ defaults: { ease: 'sine', stagger:0.4, duration: 0.5 } });
+                
+                tl.fromTo('.ctn-title', { opacity:0, y:40 }, { opacity:1, y:0 });
+                tl.fromTo('.input-box', { opacity:0, x:-100 }, { opacity:1, x:0 });
+                tl.fromTo('.contact-btn', { opacity:0, scale:0 }, { opacity:1, scale:1, ease:'back.out(1.7)' });
+                tl.fromTo('.map', { opacity:0, scale:0 }, { opacity:1, scale:1, ease:'back.out(1.7)' });
+            }
+        })
+    }, []);
+
     return (
         <div id='contact'>
-            <SubTitle title="Contato" subtitle="Entre em contato" />
+            <div className={`subtitle ctn-title d-flex flex-column gap-3 text-center ${styles.subtitle}`}>
+                <h3 className='fw-bold'>Contato</h3>
+                <h6>Entre em contato</h6>
+            </div>
 
             <div data-aos="zoom-out-left" className={`mt-5 container m-auto row ${styles.contact}`} id='contact'>
                 <div className='col-md-6 d-flex flex-column gap-5 m-auto container mt-5'>
-                    {/* <div className={`mb-4 d-flex wrap justify-content-center gap-4 ${styles.contactContainer}`}>
-                        <div className='d-flex gap-3'>
-                            <FaPhone className={styles.icon} />
-                            <div>
-                                <h5 className='fw-bold'>Número</h5>
-                                <h6>21 9 6475-7806</h6>
-                            </div>
-                        </div>
-                        <div className='d-flex gap-3'>
-                            <FaEnvelope className={styles.icon} />
-                            <div>
-                                <h5 className='fw-bold'>Email</h5>
-                                <h6>danteopzz@hotmail.com</h6>
-                            </div>
-                        </div>
-                        <div className='d-flex gap-3'>
-                            <FaMapMarkedAlt className={styles.icon} />
-                            <div>
-                                <h5 className='fw-bold'>Localização</h5>
-                                <h6>Brasil - Rio de Janeiro</h6>
-                            </div>
-                        </div>
-                    </div> */}
                     <form ref={form} onSubmit={sendEmail} className='d-flex flex-column gap-4'>
                         <div className='row'>
-                            <div className={`col-md-6 ${styles.inputBox}`}>
+                            <div className={`input-box col-md-6 ${styles.inputBox}`}>
                                 <input type="text" placeholder='Nome' name='nome' />
                                 {error.nome && <span className='text-danger mt-2'>Preencha este campo</span>}
                             </div>
-                            <div className={`col-md-6 ${styles.inputBox}`}>
+                            <div className={`input-box col-md-6 ${styles.inputBox}`}>
                                 <input type="email" placeholder='Email' name='email' />
                                 {error.email && <span className='text-danger mt-2'>Preencha este campo</span>}
                             </div>
                         </div>
-                        <div className={styles.inputBox}>
+                        <div className={`input-box ${styles.inputBox}`}>
                             <input type="tel" placeholder='Número' name='numero' onKeyUp={(e) => handlePhone(e)} maxLength={15} />
                             {error.numero && <span className='text-danger mt-2'>Preencha este campo</span>}
                         </div>
-                        <div className={styles.inputBox}>
+                        <div className={`input-box ${styles.inputBox}`}>
                             <textarea placeholder='Mensagem' name='mensagem' />
                             {error.mensagem && <span className='text-danger mt-2'>Preencha este campo</span>}
                         </div>
                         <div className='m-auto'>
-                            <Button type='submit'>
+                            <button className='contact-btn bg-dark' type='submit'>
                                 {isLoading ? 
                                 <div className="spinner-border text-light" role="status">
                                 </div>
-                                : <span>Enviar <FaPaperPlane className="text-light ms-1" /></span>}
-                            </Button>
+                                : <span className='text-light'>Enviar <FaPaperPlane className="text-light ms-1" /></span>}
+                            </button>
                         </div>
                     </form>
                 </div>
-                <div className={`${styles.map} col-md-6 m-auto`}>
+                <div className={`${styles.map} map col-md-6 m-auto`}>
                     <MapContainer center={position} zoom={12} style={{ height: "400px" }}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

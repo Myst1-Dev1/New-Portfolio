@@ -4,6 +4,11 @@
     height: 300px;
     margin-top: 100px;
 
+    .logo {
+        width: 120px;
+        object-fit: contain;
+    }
+
     h5 {
         color: var(--gray-500);
     }

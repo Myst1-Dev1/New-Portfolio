@@ -1,15 +1,16 @@
 import styles from './styles.module.scss';
+import whiteLogo from '../../assets/images/white-logo.png';
 
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
 
 export function Footer() {
+
     return (
         <>
             <div className={`d-flex align-items-center text-light ${styles.footer}`}>
                 <div className='d-flex justify-content-between wrap container' >
                     <div>
-                        <h2>João Victor</h2>
-                        <h5>Desenvolvedor Front End</h5>
+                        <img className={styles.logo} src={whiteLogo} alt="logo do Myst1 Dev" />
                     </div>
                     <div className='d-flex flex-column gap-3'>
                         <a href="#home">Início</a>
@@ -33,7 +34,7 @@ export function Footer() {
                 </div>
             </div>
             <div className={styles.copyright}>
-                <p className='text-center mt-3'>© 2023 feito com ❤️ por Myst1 Dev</p>
+                <p className='text-center mt-3'>© 2025 feito com ❤️ por Myst1 Dev</p>
             </div>
         </>
     )

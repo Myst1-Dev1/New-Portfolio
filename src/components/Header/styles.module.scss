@@ -1,18 +1,42 @@
 .header {
-    padding: 20px;
-    position: fixed;
+    padding: 0 20px;
+    position: absolute;
     top: 0;
     left: 0;
     transition: 0.3s;
+    background-color: #fff;
+    color: #000;
+
+    .logo {
+        width: 100px;
+        object-fit: contain;
+    }
 
     .Icon {
-        font-size: 20px;
+        font-size: 26px;
         cursor: pointer;
         transition: 0.3s;
 
         &:hover {
             color: var(--red-500);
         }
+    }
+
+    .ctnButton {
+        max-width: 200px;
+        width: 100%;
+        border: 1px solid #d9d1d1;
+        padding: 6px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+        
     }
 }
 
@@ -21,9 +45,10 @@
     top: 0;
     left: 0;
     z-index: 9999;
-    background-color: #141414;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
     width: 100%;
-    color: #fff;
     padding: 10px 20px;
     animation:fadeIn 1s linear;
 
@@ -33,6 +58,11 @@
         }
     }
 
+    .logo {
+        width: 80px;
+        object-fit: contain;
+    }
+
     .Icon {
         font-size: 20px;
         cursor: pointer;
@@ -41,5 +71,22 @@
         &:hover {
             color: var(--red-500);
         }
+    }
+
+    .ctnButton {
+        max-width: 200px;
+        width: 100%;
+        border: 1px solid #b8b8b8;
+        padding: 6px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+        
     }
 }

@@ -1,5 +1,4 @@
 .contact {
-
     .contactContainer {
 
         .icon {
@@ -28,9 +27,32 @@
                 outline: none;
             }
 
+            input::placeholder, textarea::placeholder {
+                color: #636161;
+            }
+
             textarea {
                 resize: none;
                 height: 150px;
+            }
+        }
+
+        button {
+            min-width: 200px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            transition:0.3s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
             }
         }
     }

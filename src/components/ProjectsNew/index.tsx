@@ -6,21 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaArrowRight, FaTimes } from 'react-icons/fa';
 import { useGSAP } from '@gsap/react';
 import { projects } from '../Projects/project';
-import { SubTitle } from '../SubTitle';
+import { ProjectDetailsDataType } from '../../types/project';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-type PerspectiveImagesType = {
-    id:number;
-    perspectiveImg:string;
-}
-
-type ProjectDetailsDataType = {
-    id:number;
-    img:string;
-    title:string;
-    description:string;
-    link:string
-    perspectiveImages:PerspectiveImagesType
-}
+gsap.registerPlugin(ScrollToPlugin);
 
 export function ProjectsNew() {
     const [showDetails, setShowDetails] = useState(false);
@@ -48,21 +37,33 @@ export function ProjectsNew() {
     }
 
     useGSAP(() => {
-        gsap.to('.box-details', { opacity:1, y: 100, ease:'bounce', duration:0.8, });
+        if(showDetails) {
+            gsap.to('.box-details', { opacity:1, y: 100, ease:'bounce', duration:0.8, });
+            gsap.to(window, { scrollTo: { y: "#projectDetails", offsetY: 50 }, duration: 0.3, ease: "sine" });
+        }
     }, [showDetails]);
 
     useGSAP(() => {
         if(!showDetails) {
-        gsap.fromTo('.box', { opacity:0, y:0 }, { opacity:1, y:20, ease:'bounce', stagger:0.4, duration:0.4, 
-            scrollTrigger: { trigger:'.box', scrub:1, once:true, toggleActions: 'start none none none' }
-         });
+            ScrollTrigger.create({
+                trigger: '#projects',
+                start: 'top 90%',
+                once: true,
+                onEnter:() => {
+                    gsap.fromTo('.projects-title', { opacity:0, y:40 }, { opacity:1, y:0, duration:0.4, ease:'sine' });
+                    gsap.fromTo('.box', { opacity:0, y:0 }, { opacity:1, y:20, ease:'bounce', stagger:0.4, duration:0.4 });
+                }
+            });
         }
-         ScrollTrigger.refresh();
+        //  ScrollTrigger.refresh();
     }, [showDetails]);
 
     return (
         <div id='projects' className={`${styles.portfolioNew} mt-5 mb-5`}>
-            <SubTitle title="Portfolio" subtitle="Projetos em Destaque"/>
+            <div className={`subtitle projects-title d-flex flex-column gap-3 text-center ${styles.subtitle}`}>
+                <h3 className='fw-bold'>Portfolio</h3>
+                <h6>Projetos em destaque</h6>
+            </div>
             {!showDetails ? (
                 <div className={`${styles.projectNew} box-container`}>
                     <div className={`row justify-content-center ${styles.container}`}>
@@ -75,7 +76,7 @@ export function ProjectsNew() {
                     </div>
             </div>
             ) : (
-                <div>
+                <div id='projectDetails'>
                     {projectDetailsData.map((data:any) => (
                     <div key={data.id} className={`${styles.projectDetails} box-details text-center`}>
                         <h2>Detalhes do Projeto</h2>

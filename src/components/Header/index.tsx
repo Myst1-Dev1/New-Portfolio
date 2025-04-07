@@ -1,31 +1,42 @@
 import { NavBar } from '../NavBar';
 import { HeaderFunctionality } from './header';
 import styles from './styles.module.scss';
+import logo from '../../assets/images/logo.png';
+import whiteLogo from '../../assets/images/white-logo.png';
 
 import { FaMoon, FaSun ,FaBars } from 'react-icons/fa';
+import { MdArrowOutward } from 'react-icons/md';
 
 export function Header() {
-  const { handleCloseNavBar, handleOpenNavBar, handleSetDarkMode, isDarkMode, isFixedHeader, isNavBarOpen } 
-        = HeaderFunctionality();    
+    const { handleCloseNavBar, handleOpenNavBar, handleSetDarkMode, isDarkMode, isNavBarOpen } 
+        = HeaderFunctionality();  
 
     return (
         <>
-            <div className={isFixedHeader ? styles.fixedHeader : `text-light w-100 ${styles.header}`}>
-                <div className='d-flex justify-content-between align-items-center m-auto'>
-                    <h1 className='h3'>João Victor</h1>
-                    <div className='d-flex gap-4'>
+            <header className={`w-100 ${styles.header}`}>
+                <div className='container d-flex justify-content-between align-items-center m-auto'>
+                    <img className={styles.logo} src={isDarkMode ? whiteLogo : logo} alt="logo do Myst1 Dev" />
+                    
+                    <NavBar 
+                        onHandleCloseNavBar = {handleCloseNavBar}
+                        onIsNavBarOpen = {isNavBarOpen} 
+                    />
+                   
+                    <div className='d-flex align-items-center gap-4'>
                         {isDarkMode ? 
-                            <FaSun onClick={handleSetDarkMode} className={styles.Icon} /> : 
-                            <FaMoon onClick={handleSetDarkMode} className={styles.Icon} />}
-                        <FaBars onClick={handleOpenNavBar} className={styles.Icon} />
+                            <FaSun onClick={handleSetDarkMode} className={styles.Icon} /> 
+                            : 
+                            <FaMoon onClick={handleSetDarkMode} className={styles.Icon} />
+                        }
+                        <FaBars onClick={handleOpenNavBar} className={`${styles.Icon} d-block d-lg-none`} />
+                        <a href="#contact" className={`d-none d-lg-flex justify-content-center gap-3 ${styles.ctnButton}`}>
+                            Contato
+                            <MdArrowOutward />
+                        </a>
                     </div>
                 </div>
-            </div>
-              {isNavBarOpen &&  
-                <NavBar 
-                    onHandleCloseNavBar = {handleCloseNavBar}
-                    onIsNavBarOpen = {isNavBarOpen} 
-                />}
+            </header>
+              
 
             {isDarkMode && <div className='dark-mode'></div>}
         </>

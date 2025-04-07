@@ -2,14 +2,13 @@
 
 import gsap from "gsap"
 import { About } from "./components/About"
-import { Banner } from "./components/Banner"
+import { Banner } from "./components/Introduction"
 import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
 import { Formation } from "./components/Formation"
 import { Header } from "./components/Header"
 // import { Projects } from "./components/Projects"
 import { ProjectsNew } from './components/ProjectsNew';
-import { Skills } from "./components/Skills"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import loadingImage from './assets/images/loading.gif';
 
@@ -34,7 +33,7 @@ gsap.registerPlugin(ScrollTrigger);
               <Banner />
               <About />
               <Formation />
-              <Skills />
+              {/* <Skills /> */}
               {/* <Services /> */}
               {/* <Projects /> */}
               <ProjectsNew />
