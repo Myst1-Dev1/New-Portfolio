@@ -105,24 +105,12 @@ export function About() {
                 <div>
                     <div className={`about-box ${styles.box}`}>
                         <h6 className='box-title d-flex align-items-center gap-3'><FaCode /> Habilidades</h6>
-                        <div className='mt-3 d-flex justify-content-center align-items-center wrap gap-2'>
+                        <div className='img-skill mt-3 d-flex justify-content-center align-items-center wrap gap-2'>
                             {skills.map(skill => (
-                                <img className='img-skill' key={skill.id} src={skill.img} alt="foto da habilidade" />
+                                <img key={skill.id} src={skill.img} alt="foto da habilidade" />
                             ))}
                         </div>
                     </div>
-                    {/* <div className={styles.box}>
-                        <h6 className='d-flex align-items-center gap-3'><FaSchool /> Educação</h6>
-                        <p>
-                            Técnologo em análise e Desenvolvimento de sistemas no Centro Universitário Unifatecie.
-                        </p>
-                    </div>
-                    <div className={styles.box}>
-                        <h6 className='d-flex align-items-center gap-3'><FaSuitcase /> Projetos</h6>
-                        <p>
-                            Projetos desenvolvidos utilizando diversas ferramentas e tecnologias, focados em resolver problemas reais.
-                        </p>
-                    </div> */}
                 </div>
                 <div className={styles.ferraments}>
                     <h6 className='ferrament-text'>Ferramentas que utilizo</h6>

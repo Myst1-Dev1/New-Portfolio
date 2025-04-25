@@ -29,7 +29,7 @@ export function NavBar({ onIsNavBarOpen, onHandleCloseNavBar } :NavBarProps) {
                     <nav className="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5">
                         <a onClick={onHandleCloseNavBar} className='nav-link' href="#home">Início</a>
                         <a onClick={onHandleCloseNavBar} className='nav-link' href="#about">Sobre</a>
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#formation">Formação</a>
+                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#services">Serviços</a>
                         <a onClick={onHandleCloseNavBar} className='nav-link' href="#projects">Portfolio</a>
                         <a onClick={onHandleCloseNavBar} className='nav-link' href="#contact">Contato</a>
                     </nav>

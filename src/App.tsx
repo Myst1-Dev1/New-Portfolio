@@ -5,11 +5,10 @@ import { About } from "./components/About"
 import { Banner } from "./components/Introduction"
 import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
-import { Formation } from "./components/Formation"
 import { Header } from "./components/Header"
-// import { Projects } from "./components/Projects"
 import { ProjectsNew } from './components/ProjectsNew';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Services } from "./components/Services"
 // import loadingImage from './assets/images/loading.gif';
 
 function App() {
@@ -32,9 +31,9 @@ gsap.registerPlugin(ScrollTrigger);
               <Header />
               <Banner />
               <About />
-              <Formation />
+              {/* <Formation /> */}
               {/* <Skills /> */}
-              {/* <Services /> */}
+              <Services />
               {/* <Projects /> */}
               <ProjectsNew />
               <Contact />

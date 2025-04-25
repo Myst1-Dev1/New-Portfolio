@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styles from './style.module.scss';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,11 +9,16 @@ import { projects } from '../Projects/project';
 import { ProjectDetailsDataType } from '../../types/project';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+import github from "../../assets/images/github.png";
+
 gsap.registerPlugin(ScrollToPlugin);
 
 export function ProjectsNew() {
     const [showDetails, setShowDetails] = useState(false);
     const [projectDetailsData, setProjectDetailsData] = useState<ProjectDetailsDataType[] | any>([]);
+
+    const containerRef:any = useRef(null);
+    const animationRef:any = useRef(null);
 
     function handleShowProjectDetails(index:number, id:number) {
         gsap.to(`.box`, {
@@ -35,6 +40,34 @@ export function ProjectsNew() {
 
         setProjectDetailsData(data);
     }
+
+    const scrollSmooth = (direction = 'down', speed = 2.5) => {
+        const container = containerRef.current;
+        const maxScroll = container.scrollHeight - container.clientHeight;
+      
+        const step = () => {
+          if (direction === 'down') {
+            if (container.scrollTop < maxScroll) {
+              container.scrollTop += speed;
+              animationRef.current = requestAnimationFrame(step);
+            }
+          } else {
+            if (container.scrollTop > 0) {
+              container.scrollTop -= speed;
+              animationRef.current = requestAnimationFrame(step);
+            }
+          }
+        };
+      
+        cancelAnimationFrame(animationRef.current);
+        animationRef.current = requestAnimationFrame(step);
+      };
+      
+      const handleMouseEnter = () => scrollSmooth('down', 2.5); // desce suave
+      const handleMouseLeave = () => {
+        cancelAnimationFrame(animationRef.current);
+        containerRef.current.scrollTop = 0;
+      };
 
     useGSAP(() => {
         if(showDetails) {
@@ -81,7 +114,11 @@ export function ProjectsNew() {
                     <div key={data.id} className={`${styles.projectDetails} box-details text-center`}>
                         <h2>Detalhes do Projeto</h2>
                             <div className={styles.container}>
-                            <div className={styles.imgContainer}>
+                            <div 
+                                ref={containerRef}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                className={`${styles.imgContainer} scrollDontShow`}>
                                 <img className='perspectiveImage' src={data.img} alt="imagem do projeto" />
                             </div>
                             <div className={`${styles.details}`}>
@@ -89,9 +126,15 @@ export function ProjectsNew() {
                                     <h6>{data.title}</h6>
                                     <FaTimes onClick={() => setShowDetails(false)} className={styles.icon} />
                                 </div>
+                                <div className={`${styles.techs}`}>
+                                    {data.techs?.map((tech:any) => (
+                                        <img key={tech.id} src={tech.img} alt="imagens das ferramentas usadas para o desenvolvimento do projeto" />
+                                    ))}
+                                    <a href={data.githubLink} target='_blank'><img src={github} alt="logo do github" /></a>
+                                </div>
                                 <p>{data.description}</p>
                                 <a href={data.link} target='_blank'>
-                                    <button className='fw-bold d-flex justify-content-between align-items-center text-light'>Demo <FaArrowRight /></button>
+                                    <button className='fw-bold d-flex gap-3 align-items-center text-light'>{data.demo === true ? 'Demo' : 'Em andamento'} <FaArrowRight /></button>
                                 </a>
                             </div>
                         </div>

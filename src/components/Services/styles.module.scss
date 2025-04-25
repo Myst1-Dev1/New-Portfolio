@@ -1,11 +1,15 @@
 .services {
+    padding: 100px 0;
 
     .serviceContainer {
 
         .serviceBox {
-            border-radius: 10px;
             padding: 10px;
-            max-width: 500px;
+            max-width: 300px;
+            width: 100%;
+            border: 1px solid #acacac;
+            background-color: transparent;
+            transition: 0.3s;
 
             .icon {
                 font-size: 30px;
@@ -13,6 +17,11 @@
 
             h4 {
                 font-size: 20px;
+            }
+
+            &:hover {
+                border: 0;
+                background-color: #ffffff75;
             }
         }
     }
