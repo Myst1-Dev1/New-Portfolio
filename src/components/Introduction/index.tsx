@@ -26,9 +26,9 @@ export function Banner() {
                     <h2 className='text-animate h5 text-center'>Olá, eu sou o João 🖐️</h2>
                 </div>
                 <div className='d-flex flex-column gap-2 mt-3'>
-                    <h2 className='text-animate text-center'>Desenvolvedor Front end</h2>
+                    <h2 className='text-animate text-center'>Desenvolvedor Full Stack</h2>
                     <p className='text-animate text-center'>
-                        Desenvolvedor Front-End com Especialização em ReactJS/Next.js, Comprometido em Proporcionar a Melhor Experiência aos Usuários através de Interfaces Interativas.
+                        Desenvolvedor Full Stack com ampla experiência na criação de interfaces para websites e aplicativos mobile (Android e iOS), além do desenvolvimento de APIs robustas e escaláveis.
                     </p>
                     <div className='d-flex justify-content-center align-items-center gap-5'>
                         <a href="#contact" className='btn-animate d-flex bg-dark text-light justify-content-center align-items-center gap-3'>Entre em contato <FaArrowRight /></a>

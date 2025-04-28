@@ -8,8 +8,10 @@ import bootstrap from '../../assets/images/bootstrap.png'
 import tailwind from '../../assets/images/tailwindIcon.png';
 import sass from '../../assets/images/sass.png'
 import react from '../../assets/images/react.png'
+import next from '../../assets/images/nextjs.png'
 import figma from '../../assets/images/figma.png'
 import jest from '../../assets/images/jest.png'
+import node from '../../assets/images/node.png'
 import wordpress from '../../assets/images/wp.png'
 import vscode from '../../assets/images/vscode.png'
 import { FaCode } from 'react-icons/fa';
@@ -56,14 +58,25 @@ const skills = [
         id:8,
         img: `${react}`
     },
+
     {
         id:9,
-        img: `${wordpress}`
+        img: `${next}`
     },
 
     {
         id:10,
+        img: `${wordpress}`
+    },
+
+    {
+        id:11,
         img: `${jest}`
+    },
+
+    {
+        id:12,
+        img: `${node}`
     },
 
 ]
@@ -94,13 +107,13 @@ export function About() {
     }, []);    
 
     return (
-        <div id='about' className={`d-flex justify-content-center align-items-center m-auto gap-5 container mb-5 ${styles.about}`}>
+        <div id='about' className={`d-flex justify-content-center m-auto gap-5 container mb-5 ${styles.about}`}>
             <div className={`${styles.imgContainer}`}>
                 <img className='about-img' src={aboutImg} alt="Foto do deselvolvedor" />
             </div>
             <div className={`d-flex flex-column gap-3 ${styles.boxContainer}`}>
                 <p className='about-text'>
-                    Apaixonado por tecnologia e morador do Rio de Janeiro, desenvolvo soluções front-end com ReactJS/Next.js, unindo criatividade e desempenho para oferecer experiências interativas incríveis.
+                    Apaixonado por tecnologia desde cedo, sempre me encantei pelo universo do design, da criação de jogos e do desenvolvimento de aplicativos. Com foco e dedicação nos estudos, construí uma jornada sólida rumo à carreira de desenvolvedor Full Stack, adquirindo experiência em diversas bibliotecas e frameworks para transformar ideias em soluções criativas e funcionais.
                 </p>
                 <div>
                     <div className={`about-box ${styles.box}`}>
