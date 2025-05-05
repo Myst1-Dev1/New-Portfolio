@@ -9,7 +9,7 @@ export function Banner() {
     const { handleDownloadCV } = AboutFunctionality();
 
     useGSAP(() => {
-        const tl = gsap.timeline({ defaults: { ease: 'sine', stagger:0.4, duration: 0.8 } });
+        const tl = gsap.timeline({ defaults: { ease: 'sine', stagger:0.4, duration: 0.4, delay:0.3 } });
 
         tl.fromTo(".devImg", { opacity:0, y:40 }, {opacity:1, y:0});
         tl.fromTo(".text-animate", { opacity:0, y:40 }, {opacity:1, y:0});
