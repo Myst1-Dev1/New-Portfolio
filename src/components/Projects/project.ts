@@ -91,7 +91,7 @@ export const projects = [
         img: `${domusKey}`,
         title: 'DomusKey',
         description: 'Projeto de construtora ficticia, na qual você pode comprar ou alugar um imóvel.',
-        link: 'https://myst1-dev1.github.io/Dr-Myst1/',
+        // link: 'https://myst1-dev1.github.io/Dr-Myst1/',
         demo:false,
         githubLink:'https://github.com/Myst1-Dev1/DomusKey',
         techs: [
@@ -149,8 +149,8 @@ export const projects = [
         img: `${dragoTech}`,
         title: 'Drago tech',
         description: 'Ecommerce de técnologia feito com Nextjs e wordpress como backend.',
-        link: 'https://drago-tech-2-0.vercel.app/',
-        demo:true,
+        // link: 'https://drago-tech-2-0.vercel.app/',
+        demo:false,
         githubLink:'https://github.com/Myst1-Dev1/Drago-Tech-2.0',
         techs: [
             {
@@ -180,7 +180,7 @@ export const projects = [
         img: `${msDelivery}`,
         title: 'MS Delivery',
         description: 'Sistema de delivery na qual os restaurantes tem acesso a um painel para gerenciar suas compras e pratos',
-        link: '#',
+        // link: '#',
         demo:false,
         githubLink:'https://github.com/Myst1-Dev1/MS-Delivery',
         techs: [
