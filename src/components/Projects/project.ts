@@ -149,8 +149,8 @@ export const projects = [
         img: `${dragoTech}`,
         title: 'Drago tech',
         description: 'Ecommerce de técnologia feito com Nextjs e wordpress como backend.',
-        // link: 'https://drago-tech-2-0.vercel.app/',
-        demo:false,
+        link: 'https://drago-tech-2-0.vercel.app/',
+        demo:true,
         githubLink:'https://github.com/Myst1-Dev1/Drago-Tech-2.0',
         techs: [
             {
