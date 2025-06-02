@@ -180,8 +180,8 @@ export const projects = [
         img: `${msDelivery}`,
         title: 'MS Delivery',
         description: 'Sistema de delivery na qual os restaurantes tem acesso a um painel para gerenciar suas compras e pratos',
-        // link: '#',
-        demo:false,
+        link: 'https://ms-delivery.vercel.app/',
+        demo:true,
         githubLink:'https://github.com/Myst1-Dev1/MS-Delivery',
         techs: [
             {
@@ -190,14 +190,18 @@ export const projects = [
             },
             {
                 id:2,
-                img:`${html}`,
+                img:`${react}`,
             },
             {
                 id:3,
-                img:`${tailwind}`,
+                img:`${html}`,
             },
             {
                 id:4,
+                img:`${tailwind}`,
+            },
+            {
+                id:5,
                 img:`${typescript}`,
             },
             {
