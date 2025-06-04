@@ -1,33 +1,35 @@
-import mysFlix from '../../assets/images/mysflix.webp';
 import msDashBoard from '../../assets/images/msdash.webp';
 import corgiBlog from '../../assets/images/corgi-blog.webp'
 import dragoTech from '../../assets/images/drago-tech.webp';
 import msDelivery from '../../assets/images/ms-delivery.webp';
 import domusKey from '../../assets/images/domusKey.webp';
+import taskemon from '../../assets/images/taskemon.webp';
 
 import html from '../../assets/images/html-5.png';
-import css from '../../assets/images/css-3.png'
-import javascript from '../../assets/images/javascript.png'
+import css from '../../assets/images/css-3.png';
+import javascript from '../../assets/images/javascript.png';
 import typescript from '../../assets/images/typescriptIcon.png';
-import bootstrap from '../../assets/images/bootstrap.png'
+import bootstrap from '../../assets/images/bootstrap.png';
 import tailwind from '../../assets/images/tailwindIcon.png';
-import sass from '../../assets/images/sass.png'
-import react from '../../assets/images/react.png'
-import angular from '../../assets/images/angular.png'
-import nextjs from '../../assets/images/nextjs.png'
-import jest from '../../assets/images/jest.png'
-import wordpress from '../../assets/images/wp.png'
-import firebase from '../../assets/images/firebase.webp'
+import sass from '../../assets/images/sass.png';
+import react from '../../assets/images/react.png';
+import angular from '../../assets/images/angular.png';
+import nextjs from '../../assets/images/nextjs.png';
+import jest from '../../assets/images/jest.png';
+import wordpress from '../../assets/images/wp.png';
+import firebase from '../../assets/images/firebase.webp';
 
 export const projects = [
     {
         id: 1,
-        img: `${mysFlix}`,
-        title: 'MysFlix',
-        description: 'Clonagem da interface da Netflix, desenvolvida com React, Styled Components e a API do The Movie Database (TMDb).',
-        link: 'https://mysflix.netlify.app/',
+        img: `${taskemon}`,
+        title: 'Taskemon',
+        description: `Aplicativo desenvolvido com Next.js e suporte a PWA, voltado para pais e mães que desejam acompanhar e gerenciar as tarefas dos seus filhos.
+                      As tarefas rendem pontos que podem ser trocados por recompensas, incentivando a responsabilidade de forma divertida e educativa.
+                      O app pode ser instalado na tela inicial como um aplicativo nativo, e conta com uma interface inspirada nos universos do Mario e Pokémon, tornando a experiência ainda mais envolvente para as crianças.`,
+        link: 'https://taskemon.vercel.app/',
         demo:true,
-        githubLink:'https://github.com/Myst1-Dev1/Netflix-Clone/tree/main',
+        githubLink:'https://github.com/Myst1-Dev1/Taskemon',
         techs: [
             {
                 id:1,
@@ -91,8 +93,8 @@ export const projects = [
         img: `${domusKey}`,
         title: 'DomusKey',
         description: 'Projeto de construtora ficticia, na qual você pode comprar ou alugar um imóvel.',
-        // link: 'https://myst1-dev1.github.io/Dr-Myst1/',
-        demo:false,
+        link: 'https://domus-key.vercel.app/',
+        demo:true,
         githubLink:'https://github.com/Myst1-Dev1/DomusKey',
         techs: [
             {

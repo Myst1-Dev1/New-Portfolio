@@ -130,10 +130,10 @@ export function ProjectsNew() {
                                     {data.techs?.map((tech:any) => (
                                         <img key={tech.id} src={tech.img} alt="imagens das ferramentas usadas para o desenvolvimento do projeto" />
                                     ))}
-                                    <a href={data.githubLink} target='_blank'><img src={github} alt="logo do github" /></a>
+                                    <a href={data.githubLink} target='_blank' rel='noopener noreferrer'><img src={github} alt="logo do github" /></a>
                                 </div>
                                 <p>{data.description}</p>
-                                <a href={data.link} target='_blank'>
+                                <a href={data.link} target='_blank' rel='noopener noreferrer'>
                                     <button className='fw-bold d-flex gap-3 align-items-center text-light'>{data.demo === true ? 'Demo' : 'Em andamento'} <FaArrowRight /></button>
                                 </a>
                             </div>

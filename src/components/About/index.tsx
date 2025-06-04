@@ -1,19 +1,20 @@
 import styles from './styles.module.scss';
 import aboutImg from '../../assets/images/about-img.jpg';
 import html from '../../assets/images/html-5.png';
-import css from '../../assets/images/css-3.png'
+import css from '../../assets/images/css-3.png';
 import javascript from '../../assets/images/javascript.png'
 import typescript from '../../assets/images/typescriptIcon.png';
-import bootstrap from '../../assets/images/bootstrap.png'
+import bootstrap from '../../assets/images/bootstrap.png';
 import tailwind from '../../assets/images/tailwindIcon.png';
-import sass from '../../assets/images/sass.png'
-import react from '../../assets/images/react.png'
-import next from '../../assets/images/nextjs.png'
-import figma from '../../assets/images/figma.png'
-import jest from '../../assets/images/jest.png'
-import node from '../../assets/images/node.png'
-import wordpress from '../../assets/images/wp.png'
-import vscode from '../../assets/images/vscode.png'
+import sass from '../../assets/images/sass.png';
+import react from '../../assets/images/react.png';
+import next from '../../assets/images/nextjs.png';
+import figma from '../../assets/images/figma.png';
+import jest from '../../assets/images/jest.png';
+import node from '../../assets/images/node.png';
+import wordpress from '../../assets/images/wp.png';
+import vscode from '../../assets/images/vscode.png';
+import mongodb from '../../assets/images/mongodb.png';
 import { FaCode } from 'react-icons/fa';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -77,6 +78,11 @@ const skills = [
     {
         id:12,
         img: `${node}`
+    },
+
+    {
+        id:13,
+        img: `${mongodb}`
     },
 
 ]
