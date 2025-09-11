@@ -3,7 +3,7 @@ import corgiBlog from '../../assets/images/corgi-blog.webp'
 import dragoTech from '../../assets/images/drago-tech.webp';
 import msDelivery from '../../assets/images/ms-delivery.webp';
 import domusKey from '../../assets/images/domusKey.webp';
-import taskemon from '../../assets/images/taskemon.webp';
+import driveUp from '../../assets/images/driveUp.webp';
 
 import html from '../../assets/images/html-5.png';
 import css from '../../assets/images/css-3.png';
@@ -22,30 +22,36 @@ import firebase from '../../assets/images/firebase.webp';
 export const projects = [
     {
         id: 1,
-        img: `${taskemon}`,
-        title: 'Taskemon',
-        description: `Aplicativo desenvolvido com Next.js e suporte a PWA, voltado para pais e mães que desejam acompanhar e gerenciar as tarefas dos seus filhos.
-                      As tarefas rendem pontos que podem ser trocados por recompensas, incentivando a responsabilidade de forma divertida e educativa.
-                      O app pode ser instalado na tela inicial como um aplicativo nativo, e conta com uma interface inspirada nos universos do Mario e Pokémon, tornando a experiência ainda mais envolvente para as crianças.`,
-        link: 'https://taskemon.vercel.app/',
-        demo:true,
-        githubLink:'https://github.com/Myst1-Dev1/Taskemon',
+        img: `${driveUp}`,
+        title: 'Drive Up',
+        description: `Projeto de locação de veículos desenvolvido para consumir uma API estruturada com Node.js, utilizando Redis e arquitetura de microservices para otimização de desempenho e escalabilidade.`,
+        link: '',
+        demo:false,
+        githubLink:'#',
         techs: [
             {
                 id:1,
                 img:`${react}`,
             },
-            {
+             {
                 id:2,
-                img:`${html}`,
+                img:`${tailwind}`,
             },
             {
                 id:3,
-                img:`${css}`,
+                img:`${typescript}`,
             },
             {
                 id:4,
-                img:`${javascript}`,
+                img:`${nextjs}`,
+            },
+            {
+                id:5,
+                img:`${html}`,
+            },
+            {
+                id:6,
+                img:`${css}`,
             },
         ]
     },
@@ -152,8 +158,8 @@ export const projects = [
         title: 'Drago tech',
         description: 'Ecommerce de técnologia feito com Nextjs e wordpress como backend.',
         link: 'https://drago-tech-2-0.vercel.app/',
-        demo:true,
-        githubLink:'https://github.com/Myst1-Dev1/Drago-Tech-2.0',
+        demo:false,
+        githubLink:'#',
         techs: [
             {
                 id:1,
