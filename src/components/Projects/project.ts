@@ -1,9 +1,9 @@
 import msDashBoard from '../../assets/images/msdash.webp';
-import corgiBlog from '../../assets/images/corgi-blog.webp'
 import dragoTech from '../../assets/images/drago-tech.webp';
 import msDelivery from '../../assets/images/ms-delivery.webp';
 import domusKey from '../../assets/images/domusKey.webp';
 import driveUp from '../../assets/images/driveUp.webp';
+import tgCityGame from '../../assets/images/tgcitygame.png';
 
 import html from '../../assets/images/html-5.png';
 import css from '../../assets/images/css-3.png';
@@ -18,6 +18,7 @@ import nextjs from '../../assets/images/nextjs.png';
 import jest from '../../assets/images/jest.png';
 import wordpress from '../../assets/images/wp.png';
 import firebase from '../../assets/images/firebase.webp';
+import gameMaker from '../../assets/images/gmaker.png';
 
 export const projects = [
     {
@@ -123,10 +124,10 @@ export const projects = [
     },
     {
         id: 4,
-        img: `${corgiBlog}`,
-        title: 'Corgi Blog',
-        description: 'Primeiro projeto com criação de tema customizado em wordpress, um simples blog sobre corgis.',
-        link: 'https://corgi.blog.digitallabor.com.br/',
+        img: `${tgCityGame}`,
+        title: 'TG City Game',
+        description: 'Jogo web desenvolvido com GameMaker, criado com o objetivo de apresentar e contar a história de diferentes locais da cidade de Tanguá. O projeto foi realizado como trabalho freelancer por mim e minha equipe',
+        link: 'https://tgcitygame.com/',
         demo:true,
         githubLink:'#',
         techs: [
@@ -144,11 +145,7 @@ export const projects = [
             },
             {
                 id:4,
-                img:`${bootstrap}`,
-            },
-            {
-                id:5,
-                img:`${wordpress}`,
+                img:`${gameMaker}`,
             }
         ]
     },
