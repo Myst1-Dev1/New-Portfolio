@@ -26,9 +26,9 @@ export const projects = [
         img: `${driveUp}`,
         title: 'Drive Up',
         description: `Projeto de locação de veículos desenvolvido para consumir uma API estruturada com Node.js, utilizando Redis e arquitetura de microservices para otimização de desempenho e escalabilidade.`,
-        link: '',
-        demo:false,
-        githubLink:'#',
+        link: 'https://drive-up-gamma.vercel.app/',
+        demo:true,
+        githubLink:'https://github.com/Myst1-Dev1/driveUp',
         techs: [
             {
                 id:1,
