@@ -1,40 +1,76 @@
 import { useGSAP } from '@gsap/react';
-import styles from './styles.module.scss';
-
 import { FaTimes } from 'react-icons/fa'
 import gsap from 'gsap';
+import { useEffect, useState } from 'react';
 
 interface NavBarProps {
-    onIsNavBarOpen:boolean
-    onHandleCloseNavBar:() => void;
+    onIsNavBarOpen: boolean
+    onHandleCloseNavBar: () => void;
 }
 
-export function NavBar({ onIsNavBarOpen, onHandleCloseNavBar } :NavBarProps) {
+
+export function NavBar({ onIsNavBarOpen, onHandleCloseNavBar }: NavBarProps) {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 992);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useGSAP(() => {
-        gsap.fromTo('.nav-link', { opacity:0, Y:0 }, { opacity:1, Y:20, duration:0.4, stagger:0.4, ease:'power1.inOut' });
+        if (onIsNavBarOpen) {
+            gsap.fromTo(
+                ".nav-link",
+                { opacity: 0, y: 10 },
+                { opacity: 1, y: 0, duration: 0.3, stagger: 0.1 }
+            );
+        }
     }, [onIsNavBarOpen]);
 
-    const isMobile = window.innerWidth < 992;
-    const shouldShowNavBar = isMobile ? onIsNavBarOpen : true;
+    const desktopClasses = "flex gap-8 items-center";
+    const mobileClasses =
+        "fixed inset-0 bg-white z-[50] w-full min-h-screen flex flex-col justify-center items-center gap-8 text-2xl font-bold";
 
     return (
-        <>
-            {shouldShowNavBar && (
-                <div className={styles.navBar}>
-                    {isMobile && (
-                        <FaTimes onClick={onHandleCloseNavBar} className={`d-block d-lg-none ${styles.icon}`} />
-                    )}
-
-                    <nav className="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5">
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#home">Início</a>
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#about">Sobre</a>
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#services">Serviços</a>
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#projects">Portfolio</a>
-                        <a onClick={onHandleCloseNavBar} className='nav-link' href="#contact">Contato</a>
-                    </nav>
-                </div>
+        <nav
+            className={
+                isMobile
+                    ? onIsNavBarOpen
+                        ? mobileClasses
+                        : "hidden"
+                    : desktopClasses
+            }
+        >
+            {isMobile && onIsNavBarOpen && (
+                <FaTimes
+                    onClick={onHandleCloseNavBar}
+                    className="absolute top-8 right-8 text-3xl text-gray-800 cursor-pointer"
+                />
             )}
-        </>
-    )
+
+            {[
+                { name: "Início", href: "#home" },
+                { name: "Sobre", href: "#about" },
+                { name: "Histórico", href: "#formation" },
+                { name: "Serviços", href: "#services" },
+                { name: "Portfolio", href: "#projects" },
+                { name: "Contato", href: "#contact" },
+            ].map((link) => (
+                <a
+                    key={link.name}
+                    onClick={onHandleCloseNavBar}
+                    href={link.href}
+                    className="nav-link font-medium transition-all duration-500 hover:text-cyan-400"
+                >
+                    {link.name}
+                </a>
+            ))}
+        </nav>
+    );
 }

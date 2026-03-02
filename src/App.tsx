@@ -1,6 +1,7 @@
 // import { useState, useEffect } from 'react';
 
 import gsap from "gsap"
+import "./globals.css";
 import { About } from "./components/About"
 import { Banner } from "./components/Introduction"
 import { Contact } from "./components/Contact"
@@ -9,11 +10,12 @@ import { Header } from "./components/Header"
 import { ProjectsNew } from './components/ProjectsNew';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Services } from "./components/Services"
+import { Formation } from "./components/Formation";
 // import loadingImage from './assets/images/loading.gif';
 
 function App() {
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   // const [loading, setLoading] = useState(false);
 
@@ -26,19 +28,19 @@ gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>
-        {/* {loading ? <div className='loading'><img src={loadingImage} alt="loading-image" /></div> :
+      {/* {loading ? <div className='loading'><img src={loadingImage} alt="loading-image" /></div> :
           <div className="overflow-hidden">    */}
-              <Header />
-              <Banner />
-              <About />
-              {/* <Formation /> */}
-              {/* <Skills /> */}
-              <Services />
-              {/* <Projects /> */}
-              <ProjectsNew />
-              <Contact />
-              <Footer />
-          {/* </div>
+      <Header />
+      <Banner />
+      <About />
+      <Formation />
+      {/* <Skills /> */}
+      <Services />
+      {/* <Projects /> */}
+      <ProjectsNew />
+      <Contact />
+      <Footer />
+      {/* </div>
         } */}
     </>
   )
