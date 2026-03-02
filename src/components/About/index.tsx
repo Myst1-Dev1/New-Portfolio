@@ -1,4 +1,3 @@
-import styles from './styles.module.scss';
 import aboutImg from '../../assets/images/about-img.jpg';
 import html from '../../assets/images/html-5.png';
 import css from '../../assets/images/css-3.png';

@@ -10,8 +10,9 @@ interface SubTitleProps {
 
 export function SubTitle({ title, subtitle }: SubTitleProps) {
     useGSAP(() => {
-        gsap.fromTo('.subtitle',{ opacity:0, y:0 }, {opacity:1, y: 10, duration:0.4, ease:'power1.inOut',
-            scrollTrigger: {trigger:'.subtitle', scrub:1, once:true, toggleActions: 'play reverse play reverse'}
+        gsap.fromTo('.subtitle', { opacity: 0, y: 0 }, {
+            opacity: 1, y: 10, duration: 0.4, ease: 'power1.inOut',
+            scrollTrigger: { trigger: '.subtitle', scrub: 1, once: true, toggleActions: 'play reverse play reverse' }
         })
     }, []);
 

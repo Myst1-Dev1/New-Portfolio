@@ -7,13 +7,10 @@ import { FaMoon, FaSun, FaBars } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useState } from 'react';
 
 export function Header() {
     const { handleCloseNavBar, handleOpenNavBar, handleSetDarkMode, isDarkMode, isNavBarOpen }
         = HeaderFunctionality();
-
-    const [isMobile, setIsMobile] = useState(false);
 
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.6 } });
