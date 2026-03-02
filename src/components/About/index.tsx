@@ -105,7 +105,7 @@ export function About() {
     }, []);
 
     return (
-        <section id='about' className="py-24 overflow-hidden">
+        <section id='about' className="py-24 px-5 overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-5 lg:gap-0 lg:grid-cols-2">
 

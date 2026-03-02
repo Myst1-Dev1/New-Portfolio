@@ -39,7 +39,7 @@ export function Contact() {
     }, []);
 
     return (
-        <div id='contact' className='py-24'>
+        <div id='contact' className='py-24 px-5'>
             <div className="ctn-title text-center mb-16 space-y-3">
                 <span className="text-gray-600 font-semibold tracking-widest uppercase text-sm">Contato</span>
                 <h3 className="text-4xl md:text-5xl font-black text-gray-500">Entre em contato</h3>

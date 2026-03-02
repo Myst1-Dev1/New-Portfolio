@@ -115,7 +115,7 @@ export function ProjectsNew() {
     };
 
     return (
-        <section ref={sectionRef} id='projects' className="py-24 overflow-hidden">
+        <section ref={sectionRef} id='projects' className="py-24 px-5 overflow-hidden">
             <div className="container mx-auto px-4">
 
                 <div className="projects-title text-center mb-20 space-y-4">

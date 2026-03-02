@@ -47,7 +47,7 @@ export function Formation() {
     ];
 
     return (
-        <section id='formation' className="py-24 overflow-hidden">
+        <section id='formation' className="py-24 px-5 overflow-hidden">
             <div className="container mx-auto px-4">
 
                 {/* Header */}
