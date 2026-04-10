@@ -1,5 +1,5 @@
 import { FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa';
-import whiteLogo from '../../assets/images/white-logo.png';
+import whiteLogo from '../../assets/images/myst-logo.webp';
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ export function Footer() {
 
                     {/* Lado Esquerdo: Logo e Bio */}
                     <div className="max-w-xs space-y-6">
-                        <img className="w-40 grayscale brightness-200" src={whiteLogo} alt="Logo Myst1 Dev" />
+                        <img className="w-40" src={whiteLogo} alt="Logo Myst1 Dev" />
                         <p className="text-sm leading-relaxed">
                             Desenvolvedor Full Stack focado em criar experiências digitais de alto impacto com performance e elegância.
                         </p>

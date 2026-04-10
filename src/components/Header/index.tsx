@@ -1,7 +1,6 @@
 import { NavBar } from '../NavBar';
 import { HeaderFunctionality } from './header';
-import logo from '../../assets/images/logo.png';
-import whiteLogo from '../../assets/images/white-logo.png';
+import logo from '../../assets/images/myst-logo.webp';
 
 import { FaMoon, FaSun, FaBars } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
@@ -21,10 +20,10 @@ export function Header() {
         <>
             <header className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
                 <div className="container mx-auto px-4 h-20 flex justify-between items-center">
-                    <div className='relative max-w-24 block'>
+                    <div className='relative max-w-40 block'>
                         <img
                             className="header-anim w-full object-contain"
-                            src={isDarkMode ? whiteLogo : logo}
+                            src={logo}
                             alt="logo"
                         />
                     </div>
