@@ -14,6 +14,9 @@ import node from '../../assets/images/node.png';
 import wordpress from '../../assets/images/wp.png';
 import vscode from '../../assets/images/vscode.png';
 import mongodb from '../../assets/images/mongodb.png';
+import nestjs from '../../assets/images/nestjs.svg';
+import postgresql from '../../assets/images/postgresql.webp';
+import docker from '../../assets/images/docker.png';
 import { FaCode } from 'react-icons/fa';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -82,6 +85,18 @@ const skills = [
     {
         id: 13,
         img: `${mongodb}`
+    },
+    {
+        id: 14,
+        img: `${nestjs}`
+    },
+    {
+        id: 15,
+        img: `${postgresql}`
+    },
+    {
+        id: 16,
+        img: `${docker}`
     },
 
 ]

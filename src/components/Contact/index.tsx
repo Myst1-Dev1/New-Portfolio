@@ -1,28 +1,15 @@
 import { ContactFuncionality } from './contact';
 
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 import { FaPaperPlane } from 'react-icons/fa';
-// import { LatLngExpression } from 'leaflet';
-// import L from 'leaflet';
-// import customIconUrl from '../../../public/map-marker.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Toast } from './toast';
 
-// const customIcon = new L.Icon({
-//     iconUrl: customIconUrl,
-//     iconSize: [32, 32],
-//     iconAnchor: [16, 32],
-//     popupAnchor: [0, -32],
-// });
-
 export function Contact() {
     const { form, sendEmail, error, isLoading, handlePhone, alert, setAlert } = ContactFuncionality();
-
-    // const position: LatLngExpression = [-22.9068, -43.1729];
 
     useGSAP(() => {
         ScrollTrigger.create({
@@ -51,7 +38,7 @@ export function Contact() {
                 </div>
 
                 <div id='contact'>
-                    <div className='col-md-6 d-flex flex-column gap-5 m-auto container mt-5'>
+                    <div className='flex flex-col gap-5 m-auto container mt-5'>
                         <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-4'>
                             <div className='flex flex-col gap-5'>
                                 <div className={`input-box`}>
@@ -85,17 +72,6 @@ export function Contact() {
                             </div>
                         </form>
                     </div>
-                    {/* <div className={`${styles.map} map col-md-6 m-auto`}>
-                    <MapContainer center={position} zoom={12} style={{ height: "400px" }}>
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        />
-                        <Marker position={position} icon={customIcon}>
-                            <Popup>Localização</Popup>
-                        </Marker>
-                    </MapContainer>
-                </div> */}
                 </div>
             </div>
             {alert && (

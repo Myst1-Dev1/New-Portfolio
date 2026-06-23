@@ -2,7 +2,7 @@ import eletroSystem from '../../assets/images/eletrosystem.webp';
 import dragoTech from '../../assets/images/drago-tech.webp';
 import msDelivery from '../../assets/images/ms-delivery.webp';
 import domusKey from '../../assets/images/domusKey.webp';
-import driveUp from '../../assets/images/driveUp.webp';
+import cBlog from '../../assets/images/cblog.webp';
 import tgCityGame from '../../assets/images/tgcitygame.png';
 
 import html from '../../assets/images/html-5.png';
@@ -17,16 +17,19 @@ import nextjs from '../../assets/images/nextjs.png';
 import jest from '../../assets/images/jest.png';
 import wordpress from '../../assets/images/wp.png';
 import gameMaker from '../../assets/images/gmaker.png';
+import nestjs from '../../assets/images/nestjs.svg';
+import postgresql from '../../assets/images/postgresql.webp';
+import docker from '../../assets/images/docker.png';
 
 export const projects = [
     {
         id: 1,
-        img: `${driveUp}`,
-        title: 'Drive Up',
-        description: `Projeto de locação de veículos desenvolvido para consumir uma API estruturada com Node.js, utilizando Redis e arquitetura de microservices para otimização de desempenho e escalabilidade.`,
-        link: 'https://drive-up-gamma.vercel.app/',
-        demo: true,
-        githubLink: 'https://github.com/Myst1-Dev1/driveUp',
+        img: `${cBlog}`,
+        title: 'Corgi Blog',
+        description: `Este projeto é um blog sobre corgis desenvolvido com uma arquitetura moderna baseada em TurboRepo, utilizando Next.js no frontend e NestJS no backend. A aplicação conta com uma estrutura de microsserviços integrada ao RabbitMQ para comunicação assíncrona, PostgreSQL como banco de dados e Docker para padronização e gerenciamento do ambiente de desenvolvimento e deploy.`,
+        link: '#',
+        demo: false,
+        githubLink: 'https://github.com/Myst1-Dev1/CBlog',
         techs: [
             {
                 id: 1,
@@ -52,6 +55,18 @@ export const projects = [
                 id: 6,
                 img: `${css}`,
             },
+            {
+                id: 7,
+                img: `${nestjs}`
+            },
+            {
+                id: 8,
+                img: `${postgresql}`
+            },
+            {
+                id: 9,
+                img: `${docker}`
+            }
         ]
     },
     {

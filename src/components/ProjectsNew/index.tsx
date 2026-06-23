@@ -226,11 +226,11 @@ export function ProjectsNew() {
                                                 Tecnologias
                                             </h5>
 
-                                            <div className="flex flex-wrap gap-3">
+                                            <div className="flex items-center flex-wrap gap-3">
                                                 {data.techs?.map((tech: any) => (
                                                     <div key={tech.id} className="p-2 rounded-xl">
                                                         <img
-                                                            className="w-8 h-8 object-cover"
+                                                            className="w-8 h-auto shrink-0 object-cover"
                                                             src={tech.img}
                                                             alt="tech"
                                                         />
