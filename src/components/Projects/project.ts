@@ -27,8 +27,8 @@ export const projects = [
         img: `${cBlog}`,
         title: 'Corgi Blog',
         description: `Este projeto é um blog sobre corgis desenvolvido com uma arquitetura moderna baseada em TurboRepo, utilizando Next.js no frontend e NestJS no backend. A aplicação conta com uma estrutura de microsserviços integrada ao RabbitMQ para comunicação assíncrona, PostgreSQL como banco de dados e Docker para padronização e gerenciamento do ambiente de desenvolvimento e deploy.`,
-        link: '#',
-        demo: false,
+        link: 'https://c-blog-web.vercel.app/',
+        demo: true,
         githubLink: 'https://github.com/Myst1-Dev1/CBlog',
         techs: [
             {
