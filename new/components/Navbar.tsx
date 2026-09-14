@@ -1,10 +1,8 @@
 "use client";
 
-
-import React, { useState } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-import { EarIcon, HeadphonesIcon, Menu, PhoneCallIcon, PhoneIcon, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +19,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-[#1b1f2b] bg-[#08090b]/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Left: Brand / Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group flex-1">
           <div className="flex items-center gap-1.5 font-mono text-sm tracking-tight">
             <span className="text-sky-400 font-bold">&lt;/&gt;</span>
             <span className="font-semibold text-white group-hover:text-sky-300 transition-colors">
@@ -46,7 +44,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right: Availability Status & CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-1 justify-end">
           {/* Availability Pill */}
           <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-[#10131b] border border-[#1e2333] text-xs font-mono text-zinc-300">
             <span className="relative flex h-2 w-2">
